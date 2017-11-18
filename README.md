@@ -1,6 +1,5 @@
 <p align="center">
     <img src="Logo.png" width="300" max-width="50%" alt="Imagine Engine" />
-    <h1>The Swift Alps Game Jam</h1>
 </p>
 
 Welcome to the **Swift Alps Game Jam** repo - which houses an app that will contain all of the games made at the game jam. To participate, do the following:
