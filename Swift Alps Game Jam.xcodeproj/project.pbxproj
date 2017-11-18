@@ -116,10 +116,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 524424281FC0931B00FA03B3 /* Build configuration list for PBXNativeTarget "Swift Alps Game Jam" */;
 			buildPhases = (
+				524424441FC097DF00FA03B3 /* Generate game list */,
 				524424121FC0931B00FA03B3 /* Sources */,
 				524424131FC0931B00FA03B3 /* Frameworks */,
 				524424141FC0931B00FA03B3 /* Resources */,
-				524424441FC097DF00FA03B3 /* Generate game list */,
 			);
 			buildRules = (
 			);
