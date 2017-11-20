@@ -14,3 +14,17 @@ Welcome to the **Swift Alps Game Jam** repo - which houses an app that will cont
 - Submit a PR that adds your game!
 
 **Let's make some games!** 🚀
+
+## Graphics credits
+
+This repo uses graphics from [OpenGameArt.org](httsp://opengameart.org), specifically:
+
+- [2D Car sprite, by chasersgaming](https://opengameart.org/content/2d-car-sprite-0)
+- [2D House, by Belohlavek](https://opengameart.org/content/2d-house-png-svg)
+- [Asteroids, by phaelax](https://opengameart.org/content/asteroids)
+- [Ball animation, by siligame](https://opengameart.org/content/ball-animation-include-vector-file)
+- [Explosion, by Cuzco](https://opengameart.org/content/explosion)
+- [Platform pack, by 1001.com](https://opengameart.org/content/platform-pack)
+- [Red car, by sleepy_byte](https://opengameart.org/content/red-car)
+- [Rocket, by JM.Atencia](https://opengameart.org/content/rocket)
+- [Soccer Ball, by gothicfan95](https://opengameart.org/content/soccer-ball)
