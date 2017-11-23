@@ -4,13 +4,24 @@ import PlaygroundSupport
 class Scene: SKScene {
     let cowboy = SKLabelNode(text: "🤠")
     let coins = ["💰", "💵", "💴", "💶", "💷", "💎"]
+    var coin = SKLabelNode(text: "💰")
 
     override func sceneDidLoad() {
-        addChild(cowboy)
         cowboy.position.x = frame.midX
         cowboy.position.y = frame.midY
+        addChild(cowboy)
 
         addCoin()
+    }
+
+    override func update(_ currentTime: TimeInterval) {
+        super.update(currentTime)
+
+        if cowboy.frame.intersects(coin.frame) {
+            // BOOM
+            coin.removeFromParent()
+            addCoin()
+        }
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -25,8 +36,9 @@ class Scene: SKScene {
     }
 
     private func addCoin() {
-        let coin = coins.random()
-        let coinNode = SKLabelNode(text: coin)
+        let coinNode = SKLabelNode(text: coins.random())
+
+        self.coin = coinNode
 
         coinNode.position.x = CGFloat(arc4random_uniform(365))
         coinNode.position.y = CGFloat(arc4random_uniform(667))
