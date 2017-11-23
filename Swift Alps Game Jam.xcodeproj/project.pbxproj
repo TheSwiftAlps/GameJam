@@ -95,6 +95,7 @@
 		5244243C1FC0967300FA03B3 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				D27071711FC6ECEA007914DE /* lorem */,
 				5244243F1FC096A900FA03B3 /* Demo */,
 			);
 			path = Games;
@@ -107,6 +108,13 @@
 				524424471FC0A36E00FA03B3 /* DemoScene.swift */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		D27071711FC6ECEA007914DE /* lorem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lorem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
