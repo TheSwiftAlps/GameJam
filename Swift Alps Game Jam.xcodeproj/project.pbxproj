@@ -33,10 +33,16 @@
 		525A7D071FC6F70B00FA8907 /* WildWildWestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7CFE1FC6F70B00FA8907 /* WildWildWestScene.swift */; };
 		525A7D081FC6F70B00FA8907 /* RocketGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7D001FC6F70B00FA8907 /* RocketGame.swift */; };
 		525A7D091FC6F70B00FA8907 /* RocketScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7D011FC6F70B00FA8907 /* RocketScene.swift */; };
+		664B45781FC73F7500119635 /* VolcanoCannonGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B45761FC73C5700119635 /* VolcanoCannonGame.swift */; };
+		664B45791FC73F7800119635 /* VolcanoCannonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B45771FC73C5700119635 /* VolcanoCannonScene.swift */; };
+		A0020DA81FC739F700B2CDA7 /* CakeKillerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0020DA61FC739F700B2CDA7 /* CakeKillerGame.swift */; };
+		A0020DA91FC739F700B2CDA7 /* CakeKillerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0020DA71FC739F700B2CDA7 /* CakeKillerScene.swift */; };
 		B399C7FD1FC71E2800102E39 /* BubbleProtectGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399C7FB1FC71D5000102E39 /* BubbleProtectGame.swift */; };
 		B399C7FE1FC71E2B00102E39 /* BubbleProtectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399C7FC1FC71D5000102E39 /* BubbleProtectScene.swift */; };
 		FEC0DBCD1FC73A69001474A9 /* DeathStarGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0DBCC1FC73A69001474A9 /* DeathStarGame.swift */; };
 		FEC0DBCF1FC73A8A001474A9 /* DeathStarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0DBCE1FC73A8A001474A9 /* DeathStarScene.swift */; };
+		DC2B4B381FC7241300F3A1E2 /* CarGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2B4B361FC7241200F3A1E2 /* CarGame.swift */; };
+		DC2B4B391FC7241300F3A1E2 /* CarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2B4B371FC7241200F3A1E2 /* CarScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,10 +74,16 @@
 		525A7CFE1FC6F70B00FA8907 /* WildWildWestScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WildWildWestScene.swift; sourceTree = "<group>"; };
 		525A7D001FC6F70B00FA8907 /* RocketGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketGame.swift; sourceTree = "<group>"; };
 		525A7D011FC6F70B00FA8907 /* RocketScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketScene.swift; sourceTree = "<group>"; };
+		664B45761FC73C5700119635 /* VolcanoCannonGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolcanoCannonGame.swift; sourceTree = "<group>"; };
+		664B45771FC73C5700119635 /* VolcanoCannonScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolcanoCannonScene.swift; sourceTree = "<group>"; };
+		A0020DA61FC739F700B2CDA7 /* CakeKillerGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CakeKillerGame.swift; sourceTree = "<group>"; };
+		A0020DA71FC739F700B2CDA7 /* CakeKillerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CakeKillerScene.swift; sourceTree = "<group>"; };
 		B399C7FB1FC71D5000102E39 /* BubbleProtectGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleProtectGame.swift; sourceTree = "<group>"; };
 		B399C7FC1FC71D5000102E39 /* BubbleProtectScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleProtectScene.swift; sourceTree = "<group>"; };
 		FEC0DBCC1FC73A69001474A9 /* DeathStarGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathStarGame.swift; sourceTree = "<group>"; };
 		FEC0DBCE1FC73A8A001474A9 /* DeathStarScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathStarScene.swift; sourceTree = "<group>"; };
+		DC2B4B361FC7241200F3A1E2 /* CarGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarGame.swift; sourceTree = "<group>"; };
+		DC2B4B371FC7241200F3A1E2 /* CarScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,9 +162,12 @@
 			isa = PBXGroup;
 			children = (
 				FEC0DBCB1FC73A46001474A9 /* DeathStar */,
+				664B45751FC73C3200119635 /* VolcanoCannon */,
+				DC2B4B351FC7241200F3A1E2 /* Car */,
 				2FDED5AF1FC7186A00580C8B /* GravityCollider */,
 				B399C7FA1FC71D4000102E39 /* BubbleProtect */,
 				37B4FE7F1FC711C400778A3E /* BubbleRocket */,
+				A0020DA51FC739F700B2CDA7 /* CakeKiller */,
 				525A7CF11FC6F70400FA8907 /* Asteroids */,
 				5244243F1FC096A900FA03B3 /* Demo */,
 				525A7CF91FC6F70B00FA8907 /* FireFighter */,
@@ -221,6 +236,22 @@
 			path = Games/Rocket;
 			sourceTree = SOURCE_ROOT;
 		};
+		664B45751FC73C3200119635 /* VolcanoCannon */ = {
+			isa = PBXGroup;
+			children = (
+				664B45761FC73C5700119635 /* VolcanoCannonGame.swift */,
+				664B45771FC73C5700119635 /* VolcanoCannonScene.swift */,
+			);
+			path = VolcanoCannon;
+		A0020DA51FC739F700B2CDA7 /* CakeKiller */ = {
+			isa = PBXGroup;
+			children = (
+				A0020DA61FC739F700B2CDA7 /* CakeKillerGame.swift */,
+				A0020DA71FC739F700B2CDA7 /* CakeKillerScene.swift */,
+			);
+			path = CakeKiller;
+			sourceTree = "<group>";
+		};
 		B399C7FA1FC71D4000102E39 /* BubbleProtect */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +268,13 @@
 				FEC0DBCE1FC73A8A001474A9 /* DeathStarScene.swift */,
 			);
 			path = DeathStar;
+		DC2B4B351FC7241200F3A1E2 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				DC2B4B361FC7241200F3A1E2 /* CarGame.swift */,
+				DC2B4B371FC7241200F3A1E2 /* CarScene.swift */,
+			);
+			path = Car;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,10 +365,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				664B45781FC73F7500119635 /* VolcanoCannonGame.swift in Sources */,
 				525A7D081FC6F70B00FA8907 /* RocketGame.swift in Sources */,
 				FEC0DBCF1FC73A8A001474A9 /* DeathStarScene.swift in Sources */,
+				A0020DA91FC739F700B2CDA7 /* CakeKillerScene.swift in Sources */,
 				525A7CF41FC6F70400FA8907 /* AsteroidsGame.swift in Sources */,
 				37B4FE811FC711E200778A3E /* BubbleRocketGame.swift in Sources */,
+				664B45791FC73F7800119635 /* VolcanoCannonScene.swift in Sources */,
 				524424461FC09DDC00FA03B3 /* GameFactory.swift in Sources */,
 				524424411FC096A900FA03B3 /* DemoGame.swift in Sources */,
 				525A7D071FC6F70B00FA8907 /* WildWildWestScene.swift in Sources */,
@@ -345,12 +386,15 @@
 				524424481FC0A36E00FA03B3 /* DemoScene.swift in Sources */,
 				524424501FC0C48700FA03B3 /* SKNode+UserData.swift in Sources */,
 				524424431FC0972A00FA03B3 /* Game.swift in Sources */,
+				DC2B4B391FC7241300F3A1E2 /* CarScene.swift in Sources */,
 				37B4FE831FC711ED00778A3E /* BubbleRocketScene.swift in Sources */,
 				524424371FC0939A00FA03B3 /* GameListViewController.swift in Sources */,
 				5244243A1FC0951000FA03B3 /* GameViewController.swift in Sources */,
 				B399C7FE1FC71E2B00102E39 /* BubbleProtectScene.swift in Sources */,
+				A0020DA81FC739F700B2CDA7 /* CakeKillerGame.swift in Sources */,
 				524424341FC0939A00FA03B3 /* AppDelegate.swift in Sources */,
 				5244244E1FC0AB0A00FA03B3 /* Array+Random.swift in Sources */,
+				DC2B4B381FC7241300F3A1E2 /* CarGame.swift in Sources */,
 				525A7D041FC6F70B00FA8907 /* FireFighterGame.swift in Sources */,
 				FEC0DBCD1FC73A69001474A9 /* DeathStarGame.swift in Sources */,
 				525A7D051FC6F70B00FA8907 /* FireFighterScene.swift in Sources */,
@@ -488,7 +532,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftalps.game-jam";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theswiftalps.game-jam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -505,7 +549,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftalps.game-jam";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theswiftalps.game-jam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
