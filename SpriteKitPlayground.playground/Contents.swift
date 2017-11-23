@@ -1,7 +1,7 @@
 import SpriteKit
 import PlaygroundSupport
 
-/*struct Categories {
+struct Categories {
     static let ground: UInt32 = 1
     static let coins: UInt32 = 1 << 1
 }
@@ -78,56 +78,8 @@ extension Scene: SKPhysicsContactDelegate {
         }
     }
 }
-*/
-
-final class RocketScene: SKScene, SKSceneDelegate {
-
-    private var rocket: SKSpriteNode!
-    private var asteroid: SKSpriteNode?
-
-    override func sceneDidLoad() {
-        super.sceneDidLoad()
-
-        self.delegate = self
-
-        rocket = SKSpriteNode(imageNamed: "Rocket")
-        rocket.position.x = frame.midX
-        rocket.position.y = frame.minY + rocket.frame.height/2
-
-        addChild(rocket)
-
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { [weak self] _ in
-
-            guard let scene = self else {
-                return
-            }
-
-            let asteroid = SKSpriteNode(imageNamed: "Asteroid")
-            scene.asteroid = asteroid
-            asteroid.position.x = CGFloat(arc4random_uniform(UInt32(scene.frame.maxX)))
-            asteroid.position.y = scene.frame.maxY
-            asteroid.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 50))
-            asteroid.physicsBody?.isDynamic = false
-            scene.addChild(asteroid)
-
-            asteroid.run(.moveTo(y: -asteroid.frame.height, duration: 3)) {
-                asteroid.removeFromParent()
-            }
-        }
-    }
-
-    override func update(_ currentTime: TimeInterval) {
-
-
-        if asteroid?.frame.intersects(rocket.frame)  {
-
-
-
-        }
-    }
-}
 
 let viewFrame = CGRect(x: 0, y: 0, width: 365, height: 667)
 let view = SKView(frame: viewFrame)
-view.presentScene(RocketScene(size: viewFrame.size))
+view.presentScene(Scene(size: viewFrame.size))
 PlaygroundPage.current.liveView = view
