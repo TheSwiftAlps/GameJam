@@ -33,6 +33,8 @@
 		525A7D071FC6F70B00FA8907 /* WildWildWestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7CFE1FC6F70B00FA8907 /* WildWildWestScene.swift */; };
 		525A7D081FC6F70B00FA8907 /* RocketGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7D001FC6F70B00FA8907 /* RocketGame.swift */; };
 		525A7D091FC6F70B00FA8907 /* RocketScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7D011FC6F70B00FA8907 /* RocketScene.swift */; };
+		6CF1FAAF1FC73C7F00910E24 /* MoonLanderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1FAAE1FC73C7F00910E24 /* MoonLanderGame.swift */; };
+		6CF1FAB11FC73CA900910E24 /* MoonLanderScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1FAB01FC73CA800910E24 /* MoonLanderScene.swift */; };
 		B399C7FD1FC71E2800102E39 /* BubbleProtectGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399C7FB1FC71D5000102E39 /* BubbleProtectGame.swift */; };
 		B399C7FE1FC71E2B00102E39 /* BubbleProtectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399C7FC1FC71D5000102E39 /* BubbleProtectScene.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		525A7CFE1FC6F70B00FA8907 /* WildWildWestScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WildWildWestScene.swift; sourceTree = "<group>"; };
 		525A7D001FC6F70B00FA8907 /* RocketGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketGame.swift; sourceTree = "<group>"; };
 		525A7D011FC6F70B00FA8907 /* RocketScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketScene.swift; sourceTree = "<group>"; };
+		6CF1FAAE1FC73C7F00910E24 /* MoonLanderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLanderGame.swift; sourceTree = "<group>"; };
+		6CF1FAB01FC73CA800910E24 /* MoonLanderScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonLanderScene.swift; sourceTree = "<group>"; };
 		B399C7FB1FC71D5000102E39 /* BubbleProtectGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleProtectGame.swift; sourceTree = "<group>"; };
 		B399C7FC1FC71D5000102E39 /* BubbleProtectScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleProtectScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +149,7 @@
 		5244243C1FC0967300FA03B3 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				6CF1FAAD1FC73C6600910E24 /* MoonLander */,
 				2FDED5AF1FC7186A00580C8B /* GravityCollider */,
 				B399C7FA1FC71D4000102E39 /* BubbleProtect */,
 				37B4FE7F1FC711C400778A3E /* BubbleRocket */,
@@ -215,6 +220,15 @@
 			name = Rocket;
 			path = Games/Rocket;
 			sourceTree = SOURCE_ROOT;
+		};
+		6CF1FAAD1FC73C6600910E24 /* MoonLander */ = {
+			isa = PBXGroup;
+			children = (
+				6CF1FAAE1FC73C7F00910E24 /* MoonLanderGame.swift */,
+				6CF1FAB01FC73CA800910E24 /* MoonLanderScene.swift */,
+			);
+			path = MoonLander;
+			sourceTree = "<group>";
 		};
 		B399C7FA1FC71D4000102E39 /* BubbleProtect */ = {
 			isa = PBXGroup;
@@ -322,6 +336,7 @@
 				525A7CF51FC6F70400FA8907 /* AsteroidsScene.swift in Sources */,
 				525A7D091FC6F70B00FA8907 /* RocketScene.swift in Sources */,
 				B399C7FD1FC71E2800102E39 /* BubbleProtectGame.swift in Sources */,
+				6CF1FAB11FC73CA900910E24 /* MoonLanderScene.swift in Sources */,
 				525A7D061FC6F70B00FA8907 /* WildWildWestGame.swift in Sources */,
 				5244244C1FC0A75D00FA03B3 /* SKScene+Extensions.swift in Sources */,
 				525A7D031FC6F70B00FA8907 /* SoccerScene.swift in Sources */,
@@ -339,6 +354,7 @@
 				525A7D041FC6F70B00FA8907 /* FireFighterGame.swift in Sources */,
 				525A7D051FC6F70B00FA8907 /* FireFighterScene.swift in Sources */,
 				525A7D021FC6F70B00FA8907 /* SoccerGame.swift in Sources */,
+				6CF1FAAF1FC73C7F00910E24 /* MoonLanderGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
