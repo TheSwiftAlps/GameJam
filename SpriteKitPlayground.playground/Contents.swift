@@ -1,81 +1,117 @@
 import SpriteKit
 import PlaygroundSupport
 
-struct Categories {
-    static let ground: UInt32 = 1
-    static let coins: UInt32 = 1 << 1
-}
-
 class Scene: SKScene {
-    let player = SKSpriteNode(imageNamed: "Character")
-    lazy var ground = makeGround()
+    let cowboy = SKLabelNode(text: "🤠")
+    let moneyBag = SKLabelNode(text: "💰")
+    let coins = ["💰", "💵", "💴", "💶", "💷", "💎"]
+    let enemies = ["🐍", "🦂", "🦈", "👻"]
+    var coin = SKLabelNode(text: "💰")
+    var enemy = SKLabelNode(text: "")
+
+    var gameOver = false
 
     override func sceneDidLoad() {
-        super.sceneDidLoad()
+        cowboy.position.x = frame.midX
+        cowboy.position.y = frame.midY
 
-        ground.fillColor = .green
-        ground.strokeColor = .green
-        ground.physicsBody = SKPhysicsBody(rectangleOf: ground.frame.size, center: CGPoint(x: ground.frame.width / 2, y: ground.frame.height / 2))
-        ground.physicsBody?.isDynamic = false
-        ground.physicsBody?.categoryBitMask = Categories.ground
-        addChild(ground)
+        addChild(cowboy)
+        addCoin()
+        addEnemie()
 
-        player.position.x = frame.midX
-        player.position.y = 200
-        player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
-        player.physicsBody?.collisionBitMask = Categories.ground
-        player.physicsBody?.contactTestBitMask = Categories.coins
-        addChild(player)
+        moneyBag.fontSize = 0
+        moneyBag.alpha = 0
 
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { [weak self] _ in
-            guard let scene = self else {
-                return
-            }
+        cowboy.addChild(moneyBag)
+        moneyBag.position.x = -12
+        moneyBag.position.y = -20
+    }
 
-            let money = SKLabelNode(text: "💰")
-            money.setScale(2)
-            money.verticalAlignmentMode = .center
-            money.position.x = -money.frame.width
-            money.position.y = 300
-            money.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 50))
-            money.physicsBody?.isDynamic = false
-            money.physicsBody?.categoryBitMask = Categories.coins
-            scene.addChild(money)
+    override func update(_ currentTime: TimeInterval) {
+        super.update(currentTime)
 
-            money.run(.moveTo(x: scene.size.width + money.frame.width, duration: 3)) {
-                money.removeFromParent()
-            }
+        if cowboy.frame.intersects(enemy.frame) {
+            setStateGameOver()
         }
 
-        physicsWorld.contactDelegate = self
+        if cowboy.frame.intersects(coin.frame) {
+            putCoinInBag()
+            coin.removeFromParent()
+            addCoin()
+            addEnemie()
+        }
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
 
-        let playerBody = player.physicsBody!
-        let groundBody = ground.physicsBody!
+        guard gameOver == false else { return }
 
-        guard playerBody.allContactedBodies().contains(groundBody) else {
-            return
-        }
+        guard let touchLocation = touches.first?.location(in: self) else { return }
 
-        playerBody.applyImpulse(CGVector(dx: 0, dy: 200))
+        let distance = distanceBetweenPoint(cowboy.position, andOtherPoint: touchLocation)
+
+        let duration = TimeInterval(0.005 * distance)
+
+        cowboy.run(.move(to: touchLocation , duration: duration))
+    }
+
+    private func putCoinInBag() {
+        moneyBag.alpha = 1
+        moneyBag.fontSize = moneyBag.fontSize + 1
+    }
+
+    private func distanceBetweenPoint(_ point1: CGPoint, andOtherPoint point2: CGPoint) -> Float {
+        return hypotf(Float(point2.x - point1.x), Float(point2.y - point1.y))
     }
 
     private func makeGround() -> SKShapeNode {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: 100)
         return SKShapeNode(rect: rect)
     }
+
+    private func addCoin() {
+        let coinNode = SKLabelNode(text: coins.random())
+
+        self.coin = coinNode
+
+        coinNode.position.x = CGFloat(arc4random_uniform(365))
+        coinNode.position.y = CGFloat(arc4random_uniform(667))
+        addChild(coinNode)
+    }
+
+    private func addEnemie() {
+        let randomNumber = arc4random_uniform(10)
+        guard randomNumber < 3 else { return }
+
+        let enemyNode = SKLabelNode(text: enemies.random())
+
+         self.enemy = enemyNode
+
+        enemyNode.position.x = CGFloat(arc4random_uniform(365))
+        enemyNode.position.y = CGFloat(arc4random_uniform(667))
+        addChild(enemyNode)
+    }
+
+    private func setStateGameOver() {
+        gameOver = true
+
+        let boom = SKLabelNode(text: "💥")
+        cowboy.addChild(boom)
+
+        let gameOverLabel = SKLabelNode(text: "GAME OVER")
+        gameOverLabel.position.x = frame.midX
+        gameOverLabel.position.y = frame.midY
+        gameOverLabel.fontSize = 50
+        gameOverLabel.fontColor = .red
+        addChild(gameOverLabel)
+    }
 }
 
-extension Scene: SKPhysicsContactDelegate {
-    func didBegin(_ contact: SKPhysicsContact) {
-        if contact.bodyA.node == player {
-            contact.bodyB.node?.removeFromParent()
-        } else {
-            contact.bodyA.node?.removeFromParent()
-        }
+extension Array {
+    /// Pick a random element from the array
+    func random() -> Element {
+        return self[Int(arc4random_uniform(UInt32(count)))]
     }
 }
 
