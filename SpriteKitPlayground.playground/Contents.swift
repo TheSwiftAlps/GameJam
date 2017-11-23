@@ -7,146 +7,80 @@ struct Categories {
 }
 
 class Scene: SKScene {
-    //let player = SKSpriteNode(imageNamed: "Character")
-    let player = SKLabelNode(text: "🤠")
-
-    let pointLabel = SKLabelNode(text: "DAMAGE: 0")
-    var damage = 0
-    lazy var fence = makeFence()
-
+    let player = SKSpriteNode(imageNamed: "Character")
+    lazy var ground = makeGround()
+    
     override func sceneDidLoad() {
         super.sceneDidLoad()
-
-        physicsWorld.gravity.dy = 0
-        physicsWorld.gravity.dx = 0
         
-        fence.forEach { (node) in
-            addChild(node)
-        }
+        ground.fillColor = .green
+        ground.strokeColor = .green
+        ground.physicsBody = SKPhysicsBody(rectangleOf: ground.frame.size, center: CGPoint(x: ground.frame.width / 2, y: ground.frame.height / 2))
+        ground.physicsBody?.isDynamic = false
+        ground.physicsBody?.categoryBitMask = Categories.ground
+        addChild(ground)
         
-        pointLabel.position.x = frame.midX
-        pointLabel.position.y = frame.height - 50
-        addChild(pointLabel)
-    
         player.position.x = frame.midX
-        player.position.y = frame.midY
-        player.fontSize = 60.0
-        
-        var playerHitFrame = player.frame.size
-        playerHitFrame.width -= 5
-        playerHitFrame.height -= 7
-        player.physicsBody = SKPhysicsBody(rectangleOf: playerHitFrame,
-                                           center: CGPoint(x: 0,
-                                                           y: player.fontSize / 2 - 8))
+        player.position.y = 200
+        player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
         player.physicsBody?.collisionBitMask = Categories.ground
-        player.physicsBody?.contactTestBitMask = Categories.ground
+        player.physicsBody?.contactTestBitMask = Categories.coins
         addChild(player)
-
-        arc4random_stir()
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+        
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { [weak self] _ in
             guard let scene = self else {
                 return
             }
-
-            scene.physicsWorld.gravity.dy = CGFloat(arc4random_uniform(3)) - 1.2
             
-            scene.physicsWorld.gravity.dx = CGFloat(arc4random_uniform(3)) - 1.2
+            let money = SKLabelNode(text: "💰")
+            money.setScale(2)
+            money.verticalAlignmentMode = .center
+            money.position.x = -money.frame.width
+            money.position.y = 300
+            money.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 50))
+            money.physicsBody?.isDynamic = false
+            money.physicsBody?.categoryBitMask = Categories.coins
+            scene.addChild(money)
+            
+            money.run(.moveTo(x: scene.size.width + money.frame.width, duration: 3)) {
+                money.removeFromParent()
+            }
         }
-
-        physicsWorld.contactDelegate = self
         
+        physicsWorld.contactDelegate = self
     }
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-
-        let pos = touches.first!.location(in: self)
         
-        let multiplier: CGFloat = 0.2
+        let playerBody = player.physicsBody!
+        let groundBody = ground.physicsBody!
         
-        let diff_x: CGFloat = (pos.x - player.position.x) * multiplier
-        let diff_y: CGFloat = (pos.y - player.position.y) * multiplier
+        guard playerBody.allContactedBodies().contains(groundBody) else {
+            return
+        }
         
-        player.physicsBody?.applyImpulse(CGVector(dx: diff_x, dy: diff_y))
-        
+        playerBody.applyImpulse(CGVector(dx: 0, dy: 200))
     }
-
-
-
-    private func makeFence() -> [SKShapeNode] {
-        let bottomFrame = CGRect(x: 0, y:0, width: size.width, height: 10)
-        let bottomNode = SKShapeNode(rect: bottomFrame)
-       
-        bottomNode.fillColor = .red
-        bottomNode.strokeColor = .red
-        bottomNode.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomFrame)
-        
-        bottomNode.physicsBody?.isDynamic = false
-        bottomNode.physicsBody?.categoryBitMask = Categories.ground
     
-        let topFrame = CGRect(x: 0, y:size.height-10, width: size.width, height: 10)
-        let topNode = SKShapeNode(rect: topFrame)
-        
-        topNode.fillColor = .red
-        topNode.strokeColor = .red
-        topNode.physicsBody = SKPhysicsBody(edgeLoopFrom: topFrame)
-        
-        topNode.physicsBody?.isDynamic = false
-        topNode.physicsBody?.categoryBitMask = Categories.ground
-        
-        let leftFrame = CGRect(x: 0, y:0, width: 10, height: size.height)
-        let leftNode = SKShapeNode(rect: leftFrame)
-        
-        leftNode.fillColor = .red
-        leftNode.strokeColor = .red
-        leftNode.physicsBody = SKPhysicsBody(edgeLoopFrom: leftFrame)
-        
-        leftNode.physicsBody?.isDynamic = false
-        leftNode.physicsBody?.categoryBitMask = Categories.ground
-        
-        
-        let rigthFrame = CGRect(x: size.width-10, y:0, width: 10, height: size.height)
-        let rightNode = SKShapeNode(rect: rigthFrame)
-        
-        rightNode.fillColor = .red
-        rightNode.strokeColor = .red
-        rightNode.physicsBody = SKPhysicsBody(edgeLoopFrom: rigthFrame)
-
-        rightNode.physicsBody?.isDynamic = false
-        rightNode.physicsBody?.categoryBitMask = Categories.ground
-        
-        return [bottomNode, topNode, leftNode, rightNode]
+    private func makeGround() -> SKShapeNode {
+        let rect = CGRect(x: 0, y: 0, width: size.width, height: 100)
+        return SKShapeNode(rect: rect)
     }
 }
 
 extension Scene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
-        damage += 1
-        pointLabel.text = "DAMAGE: \(damage)"
-        
-        let multiplier: CGFloat = 0.1
-
-        let diff_x: CGFloat = (frame.midX - player.position.x) * multiplier
-        let diff_y: CGFloat = (frame.midY - player.position.y) * multiplier
-        
-        player.physicsBody?.applyImpulse(CGVector(dx: diff_x, dy: diff_y))
-        
-        switch damage {
-        case 5...7: player.text = "😕"
-        case 8...10: player.text = "😩"
-        case 11...13: player.text = "😭"
-        case 14...16: player.text = "🤯"
-        case 17...18: player.text = "🤬"
-        case 19...20: player.text = "💩"
-        case 21...30: player.text = "🔥"
-
-        default: break
+        if contact.bodyA.node == player {
+            contact.bodyB.node?.removeFromParent()
+        } else {
+            contact.bodyA.node?.removeFromParent()
         }
     }
 }
 
 let viewFrame = CGRect(x: 0, y: 0, width: 365, height: 667)
 let view = SKView(frame: viewFrame)
-//view.showsPhysics = true
 view.presentScene(Scene(size: viewFrame.size))
 PlaygroundPage.current.liveView = view
+
