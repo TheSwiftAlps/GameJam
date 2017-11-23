@@ -24,7 +24,34 @@ extension AsteroidsScene: SKPhysicsContactDelegate {
                 self.removeAllChildren()
                 self.addGameOver()
             }
+            
+            return
         }
+        
+        
+        if let laser = [contact.bodyA, contact.bodyB].filter({ $0.node!.name == "laser" }).first,
+           let asteroid = [contact.bodyA, contact.bodyB].filter({ $0.node!.name == "asteroid" }).first {
+            
+            
+            let textures: [SKTexture] = [
+                SKTexture(imageNamed: "Explosion-0"),
+                SKTexture(imageNamed: "Explosion-1"),
+                SKTexture(imageNamed: "Explosion-2"),
+                SKTexture(imageNamed: "Explosion-3"),
+                SKTexture(imageNamed: "Explosion-4"),
+                SKTexture(imageNamed: "Explosion-5"),
+                SKTexture(imageNamed: "Explosion-6")
+            ]
+            asteroid.node?.run(.animate(with: textures, timePerFrame: 0.05)) {
+                laser.node?.removeFromParent()
+                asteroid.node?.removeFromParent()
+            }
+            
+            
+            
+        }
+        
+        
     }
     
     func didEnd(_ contact: SKPhysicsContact) {
@@ -56,6 +83,14 @@ class AsteroidsScene: SKScene {
                 self?.spawnAsteroid()
             })
             ])))
+        
+        run(.repeatForever(.sequence([
+            .wait(forDuration: 0.1),
+            .run({ [weak self] in
+                self?.spawnLaser()
+            })
+            ])))
+        
         spawnRocket()
         physicsWorld.contactDelegate = self
     }
@@ -75,7 +110,7 @@ class AsteroidsScene: SKScene {
     // This is called when the user began touching the screen
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        super.touchesBegan(touches, with: event)
+        super.touchesMoved(touches, with: event)
         
         // Just like we can get a touch location from a view, we can get it from a node as well
         guard let touchLocation = touches.first?.location(in: self) else {
@@ -91,6 +126,7 @@ class AsteroidsScene: SKScene {
     private func spawnAsteroid() {
         let asteroid = SKSpriteNode(imageNamed: "Asteroid")
         asteroid.setScale(0.5)
+        asteroid.name = "asteroid"
         
         // We insert the emoji at the bottom of the hierarchy, to create a 3D effect
         // that the current emojis are in front of it depth-wise
@@ -147,6 +183,39 @@ class AsteroidsScene: SKScene {
         label.position = center
         addChild(label)
     }
+    
+    private func spawnLaser() {
+        let laser = SKSpriteNode(imageNamed: "Laser")
+        laser.setScale(0.2)
+        laser.blendMode = .add
+        laser.name = "laser"
+        
+        // We insert the emoji at the bottom of the hierarchy, to create a 3D effect
+        // that the current emojis are in front of it depth-wise
+        addChild(laser)
+        
+        laser.position.x = rocket.position.x
+        laser.position.y = 160
+        
+        // A physics body enables our node to be affected by gravity
+        let physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: laser.size.width, height: laser.size.height ))
+        
+        laser.physicsBody = physicsBody
+//        laser.physicsBody?.collisionBitMask = 1
+        laser.physicsBody?.isDynamic = false
+        laser.physicsBody?.contactTestBitMask = 1
+        
+        // Rotate and scale the emoji to cause a crazy effect
+        let actionGroup = SKAction.group([
+            .move(to: CGPoint(x: laser.position.x, y: size.height), duration: 0.2)
+            ])
+        
+        // Once the action is done we're finished with the emoji and it can be removed
+        laser.run(actionGroup) { [weak laser] in
+            laser?.removeFromParent()
+        }
+    }
+    
     
 
 }
