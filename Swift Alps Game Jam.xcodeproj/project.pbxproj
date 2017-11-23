@@ -27,6 +27,8 @@
 		5244244C1FC0A75D00FA03B3 /* SKScene+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244244B1FC0A75D00FA03B3 /* SKScene+Extensions.swift */; };
 		5244244E1FC0AB0A00FA03B3 /* Array+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244244D1FC0AB0A00FA03B3 /* Array+Random.swift */; };
 		524424501FC0C48700FA03B3 /* SKNode+UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244244F1FC0C48700FA03B3 /* SKNode+UserData.swift */; };
+		99D6B9881FC6EAA700F497A0 /* FireFighterGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D6B9871FC6EAA700F497A0 /* FireFighterGame.swift */; };
+		99D6B98A1FC6EAF500F497A0 /* FireFighterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D6B9891FC6EAF500F497A0 /* FireFighterScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		5244244B1FC0A75D00FA03B3 /* SKScene+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+Extensions.swift"; sourceTree = "<group>"; };
 		5244244D1FC0AB0A00FA03B3 /* Array+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Random.swift"; sourceTree = "<group>"; };
 		5244244F1FC0C48700FA03B3 /* SKNode+UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+UserData.swift"; sourceTree = "<group>"; };
+		99D6B9871FC6EAA700F497A0 /* FireFighterGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireFighterGame.swift; sourceTree = "<group>"; };
+		99D6B9891FC6EAF500F497A0 /* FireFighterScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireFighterScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 		5244243C1FC0967300FA03B3 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				99D6B9861FC6EA8B00F497A0 /* FireFighter */,
 				4BAAB19D1FC6F082003FB0C4 /* Soccer */,
 				35AA148F1FC6F1AF006E519B /* Asteroids */,
 				2A1A6A461FC6E628001961B4 /* Rocket */,
@@ -153,6 +158,15 @@
 				524424471FC0A36E00FA03B3 /* DemoScene.swift */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		99D6B9861FC6EA8B00F497A0 /* FireFighter */ = {
+			isa = PBXGroup;
+			children = (
+				99D6B9871FC6EAA700F497A0 /* FireFighterGame.swift */,
+				99D6B9891FC6EAF500F497A0 /* FireFighterScene.swift */,
+			);
+			path = FireFighter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,10 +265,12 @@
 				4BAAB1A11FC6F0C2003FB0C4 /* SoccerScene.swift in Sources */,
 				524424501FC0C48700FA03B3 /* SKNode+UserData.swift in Sources */,
 				524424431FC0972A00FA03B3 /* Game.swift in Sources */,
+				99D6B9881FC6EAA700F497A0 /* FireFighterGame.swift in Sources */,
 				524424371FC0939A00FA03B3 /* GameListViewController.swift in Sources */,
 				35AA14921FC6F1AF006E519B /* AsteroidsGame.swift in Sources */,
 				5244243A1FC0951000FA03B3 /* GameViewController.swift in Sources */,
 				524424341FC0939A00FA03B3 /* AppDelegate.swift in Sources */,
+				99D6B98A1FC6EAF500F497A0 /* FireFighterScene.swift in Sources */,
 				35AA14931FC6F1AF006E519B /* AsteroidsScene.swift in Sources */,
 				2A1A6A481FC6E641001961B4 /* RocketGame.swift in Sources */,
 				5244244E1FC0AB0A00FA03B3 /* Array+Random.swift in Sources */,
