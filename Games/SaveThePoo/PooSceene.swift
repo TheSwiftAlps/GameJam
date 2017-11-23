@@ -103,7 +103,6 @@ extension PooScene: SKPhysicsContactDelegate {
             contact.bodyA.node?.removeFromParent()
         }
         
-        
         switch healthPoints.text!.characters.count {
         case 1: healthPoints.text = "Game Over"
         case 2: healthPoints.text = "❤️"
