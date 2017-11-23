@@ -471,7 +471,7 @@
 				DEVELOPMENT_TEAM = 729WVZ5N33;
 				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftalps.game-jam";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theswiftalps.game-jam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -486,7 +486,7 @@
 				DEVELOPMENT_TEAM = 729WVZ5N33;
 				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftalps.game-jam";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theswiftalps.game-jam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
