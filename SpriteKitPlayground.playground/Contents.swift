@@ -5,7 +5,10 @@ class Scene: SKScene {
     let cowboy = SKLabelNode(text: "🤠")
     let moneyBag = SKLabelNode(text: "💰")
     let coins = ["💰", "💵", "💴", "💶", "💷", "💎"]
+    let enemies = ["🐍", "🦂", "🦈", "👻"]
     var coin = SKLabelNode(text: "💰")
+    var enemy = SKLabelNode(text: "")
+    var gameOver = false
     var score = 0
     let scoreLabel = SKLabelNode(text: "0")
 
@@ -16,6 +19,7 @@ class Scene: SKScene {
 
         addChild(cowboy)
         addCoin()
+        addEnemie()
 
         moneyBag.fontSize = 10
         moneyBag.alpha = 0
@@ -28,10 +32,16 @@ class Scene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
 
+        if cowboy.frame.intersects(enemy.frame) {
+            setStateGameOver()
+        }
+
         if cowboy.frame.intersects(coin.frame) {
             putCoinInBag()
             coin.removeFromParent()
             addCoin()
+            addEnemie()
+
             score += 1
             scoreLabel.text = String(score)
         }
@@ -39,6 +49,8 @@ class Scene: SKScene {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+
+        guard gameOver == false else { return }
 
         guard let touchLocation = touches.first?.location(in: self) else { return }
 
@@ -77,6 +89,33 @@ class Scene: SKScene {
         coinNode.position.x = CGFloat(arc4random_uniform(365))
         coinNode.position.y = CGFloat(arc4random_uniform(667))
         addChild(coinNode)
+    }
+
+    private func addEnemie() {
+        let randomNumber = arc4random_uniform(10)
+        guard randomNumber < 3 else { return }
+
+        let enemyNode = SKLabelNode(text: enemies.random())
+
+         self.enemy = enemyNode
+
+        enemyNode.position.x = CGFloat(arc4random_uniform(365))
+        enemyNode.position.y = CGFloat(arc4random_uniform(667))
+        addChild(enemyNode)
+    }
+
+    private func setStateGameOver() {
+        gameOver = true
+
+        let boom = SKLabelNode(text: "💥")
+        cowboy.addChild(boom)
+
+        let gameOverLabel = SKLabelNode(text: "GAME OVER")
+        gameOverLabel.position.x = frame.midX
+        gameOverLabel.position.y = frame.midY
+        gameOverLabel.fontSize = 50
+        gameOverLabel.fontColor = .red
+        addChild(gameOverLabel)
     }
 }
 
