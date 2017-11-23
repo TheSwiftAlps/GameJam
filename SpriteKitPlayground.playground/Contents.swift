@@ -13,12 +13,12 @@ class Scene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
 
-        ground.fillColor = .green
-        ground.strokeColor = .green
-        ground.physicsBody = SKPhysicsBody(rectangleOf: ground.frame.size, center: CGPoint(x: ground.frame.width / 2, y: ground.frame.height / 2))
-        ground.physicsBody?.isDynamic = false
-        ground.physicsBody?.categoryBitMask = Categories.ground
-        addChild(ground)
+//        ground.fillColor = .green
+//        ground.strokeColor = .green
+//        ground.physicsBody = SKPhysicsBody(rectangleOf: ground.frame.size, center: CGPoint(x: ground.frame.width / 2, y: ground.frame.height / 2))
+//        ground.physicsBody?.isDynamic = false
+//        ground.physicsBody?.categoryBitMask = Categories.ground
+//        addChild(ground)
 
         player.position.x = frame.midX
         player.position.y = 200
