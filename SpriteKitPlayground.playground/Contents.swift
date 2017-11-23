@@ -1,81 +1,43 @@
 import SpriteKit
 import PlaygroundSupport
 
-struct Categories {
-    static let ground: UInt32 = 1
-    static let coins: UInt32 = 1 << 1
-}
-
 class Scene: SKScene {
-    let player = SKSpriteNode(imageNamed: "Character")
-    lazy var ground = makeGround()
+    let cowboy = SKLabelNode(text: "🤠")
+    let coins = ["💰", "💵", "💴", "💶", "💷", "💎"]
 
     override func sceneDidLoad() {
-        super.sceneDidLoad()
+        addChild(cowboy)
+        cowboy.position.x = frame.midX
+        cowboy.position.y = frame.midY
 
-        ground.fillColor = .green
-        ground.strokeColor = .green
-        ground.physicsBody = SKPhysicsBody(rectangleOf: ground.frame.size, center: CGPoint(x: ground.frame.width / 2, y: ground.frame.height / 2))
-        ground.physicsBody?.isDynamic = false
-        ground.physicsBody?.categoryBitMask = Categories.ground
-        addChild(ground)
-
-        player.position.x = frame.midX
-        player.position.y = 200
-        player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
-        player.physicsBody?.collisionBitMask = Categories.ground
-        player.physicsBody?.contactTestBitMask = Categories.coins
-        addChild(player)
-
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { [weak self] _ in
-            guard let scene = self else {
-                return
-            }
-
-            let money = SKLabelNode(text: "💰")
-            money.setScale(2)
-            money.verticalAlignmentMode = .center
-            money.position.x = -money.frame.width
-            money.position.y = 300
-            money.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 50))
-            money.physicsBody?.isDynamic = false
-            money.physicsBody?.categoryBitMask = Categories.coins
-            scene.addChild(money)
-
-            money.run(.moveTo(x: scene.size.width + money.frame.width, duration: 3)) {
-                money.removeFromParent()
-            }
-        }
-
-        physicsWorld.contactDelegate = self
+        addCoin()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
 
-        let playerBody = player.physicsBody!
-        let groundBody = ground.physicsBody!
-
-        guard playerBody.allContactedBodies().contains(groundBody) else {
-            return
-        }
-
-        playerBody.applyImpulse(CGVector(dx: 0, dy: 200))
+        cowboy.run(.move(to: touches.first!.location(in: self), duration: 2.0))
     }
 
     private func makeGround() -> SKShapeNode {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: 100)
         return SKShapeNode(rect: rect)
     }
+
+    private func addCoin() {
+        let coin = coins.random()
+        let coinNode = SKLabelNode(text: coin)
+
+        coinNode.position.x = CGFloat(arc4random_uniform(365))
+        coinNode.position.y = CGFloat(arc4random_uniform(667))
+        addChild(coinNode)
+    }
 }
 
-extension Scene: SKPhysicsContactDelegate {
-    func didBegin(_ contact: SKPhysicsContact) {
-        if contact.bodyA.node == player {
-            contact.bodyB.node?.removeFromParent()
-        } else {
-            contact.bodyA.node?.removeFromParent()
-        }
+extension Array {
+    /// Pick a random element from the array
+    func random() -> Element {
+        return self[Int(arc4random_uniform(UInt32(count)))]
     }
 }
 
