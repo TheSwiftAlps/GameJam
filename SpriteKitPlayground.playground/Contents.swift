@@ -8,10 +8,12 @@ class Scene: SKScene {
     let enemies = ["🐍", "🦂", "🦈", "👻"]
     var coin = SKLabelNode(text: "💰")
     var enemy = SKLabelNode(text: "")
-
     var gameOver = false
+    var score = 0
+    let scoreLabel = SKLabelNode(text: "0")
 
     override func sceneDidLoad() {
+        drawScoreBoard()
         cowboy.position.x = frame.midX
         cowboy.position.y = frame.midY
 
@@ -19,7 +21,7 @@ class Scene: SKScene {
         addCoin()
         addEnemie()
 
-        moneyBag.fontSize = 0
+        moneyBag.fontSize = 10
         moneyBag.alpha = 0
 
         cowboy.addChild(moneyBag)
@@ -39,6 +41,9 @@ class Scene: SKScene {
             coin.removeFromParent()
             addCoin()
             addEnemie()
+
+            score += 1
+            scoreLabel.text = String(score)
         }
     }
 
@@ -54,6 +59,12 @@ class Scene: SKScene {
         let duration = TimeInterval(0.005 * distance)
 
         cowboy.run(.move(to: touchLocation , duration: duration))
+    }
+
+    private func drawScoreBoard() {
+        scoreLabel.position.x = frame.midX
+        scoreLabel.position.y = 80
+        addChild(scoreLabel)
     }
 
     private func putCoinInBag() {
