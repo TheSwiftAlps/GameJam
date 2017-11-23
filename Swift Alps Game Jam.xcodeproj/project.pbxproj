@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FDED5B11FC7188E00580C8B /* GravityColliderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDED5B01FC7188E00580C8B /* GravityColliderGame.swift */; };
+		2FDED5B31FC7189A00580C8B /* GravityColliderScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDED5B21FC7189A00580C8B /* GravityColliderScene.swift */; };
 		524424341FC0939A00FA03B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244242E1FC0939A00FA03B3 /* AppDelegate.swift */; };
 		524424351FC0939A00FA03B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5244242F1FC0939A00FA03B3 /* Assets.xcassets */; };
 		524424361FC0939A00FA03B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524424301FC0939A00FA03B3 /* LaunchScreen.storyboard */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2FDED5B01FC7188E00580C8B /* GravityColliderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityColliderGame.swift; sourceTree = "<group>"; };
+		2FDED5B21FC7189A00580C8B /* GravityColliderScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityColliderScene.swift; sourceTree = "<group>"; };
 		524424161FC0931B00FA03B3 /* Swift Alps Game Jam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Alps Game Jam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5244242E1FC0939A00FA03B3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5244242F1FC0939A00FA03B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +73,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FDED5AF1FC7186A00580C8B /* GravityCollider */ = {
+			isa = PBXGroup;
+			children = (
+				2FDED5B01FC7188E00580C8B /* GravityColliderGame.swift */,
+				2FDED5B21FC7189A00580C8B /* GravityColliderScene.swift */,
+			);
+			path = GravityCollider;
+			sourceTree = "<group>";
+		};
 		5244240D1FC0931B00FA03B3 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +128,7 @@
 		5244243C1FC0967300FA03B3 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				2FDED5AF1FC7186A00580C8B /* GravityCollider */,
 				525A7CF11FC6F70400FA8907 /* Asteroids */,
 				5244243F1FC096A900FA03B3 /* Demo */,
 				525A7CF91FC6F70B00FA8907 /* FireFighter */,
@@ -281,6 +295,8 @@
 				525A7D061FC6F70B00FA8907 /* WildWildWestGame.swift in Sources */,
 				5244244C1FC0A75D00FA03B3 /* SKScene+Extensions.swift in Sources */,
 				525A7D031FC6F70B00FA8907 /* SoccerScene.swift in Sources */,
+				2FDED5B11FC7188E00580C8B /* GravityColliderGame.swift in Sources */,
+				2FDED5B31FC7189A00580C8B /* GravityColliderScene.swift in Sources */,
 				524424481FC0A36E00FA03B3 /* DemoScene.swift in Sources */,
 				524424501FC0C48700FA03B3 /* SKNode+UserData.swift in Sources */,
 				524424431FC0972A00FA03B3 /* Game.swift in Sources */,

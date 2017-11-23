@@ -1,22 +1,26 @@
+//
+//  GravityColliderScene.swift
+//  Swift Alps Game Jam
+//
+//  Created by Dennis Charmington on 2017-11-23.
+//
 import SpriteKit
-import PlaygroundSupport
 
-struct Categories {
+private struct Categories {
     static let ground: UInt32 = 1
     static let coins: UInt32 = 1 << 1
 }
 
-class Scene: SKScene {
-    //let player = SKSpriteNode(imageNamed: "Character")
+class GravityColliderScene: SKScene {
     let player = SKLabelNode(text: "🤠")
-
+    
     let pointLabel = SKLabelNode(text: "DAMAGE: 0")
     var damage = 0
     lazy var fence = makeFence()
-
+    
     override func sceneDidLoad() {
         super.sceneDidLoad()
-
+        
         physicsWorld.gravity.dy = 0
         physicsWorld.gravity.dx = 0
         
@@ -25,9 +29,9 @@ class Scene: SKScene {
         }
         
         pointLabel.position.x = frame.midX
-        pointLabel.position.y = frame.height - 50
+        pointLabel.position.y = frame.height - 50 - 44
         addChild(pointLabel)
-    
+        
         player.position.x = frame.midX
         player.position.y = frame.midY
         player.fontSize = 60.0
@@ -41,25 +45,25 @@ class Scene: SKScene {
         player.physicsBody?.collisionBitMask = Categories.ground
         player.physicsBody?.contactTestBitMask = Categories.ground
         addChild(player)
-
+        
         arc4random_stir()
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             guard let scene = self else {
                 return
             }
-
+            
             scene.physicsWorld.gravity.dy = CGFloat(arc4random_uniform(3)) - 1.2
             
             scene.physicsWorld.gravity.dx = CGFloat(arc4random_uniform(3)) - 1.2
         }
-
+        
         physicsWorld.contactDelegate = self
         
     }
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-
+        
         let pos = touches.first!.location(in: self)
         
         let multiplier: CGFloat = 0.2
@@ -70,21 +74,21 @@ class Scene: SKScene {
         player.physicsBody?.applyImpulse(CGVector(dx: diff_x, dy: diff_y))
         
     }
-
-
-
+    
+    
+    
     private func makeFence() -> [SKShapeNode] {
         let bottomFrame = CGRect(x: 0, y:0, width: size.width, height: 10)
         let bottomNode = SKShapeNode(rect: bottomFrame)
-       
+        
         bottomNode.fillColor = .red
         bottomNode.strokeColor = .red
         bottomNode.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomFrame)
         
         bottomNode.physicsBody?.isDynamic = false
         bottomNode.physicsBody?.categoryBitMask = Categories.ground
-    
-        let topFrame = CGRect(x: 0, y:size.height-10, width: size.width, height: 10)
+        
+        let topFrame = CGRect(x: 0, y:size.height-10-44, width: size.width, height: 10)
         let topNode = SKShapeNode(rect: topFrame)
         
         topNode.fillColor = .red
@@ -111,7 +115,7 @@ class Scene: SKScene {
         rightNode.fillColor = .red
         rightNode.strokeColor = .red
         rightNode.physicsBody = SKPhysicsBody(edgeLoopFrom: rigthFrame)
-
+        
         rightNode.physicsBody?.isDynamic = false
         rightNode.physicsBody?.categoryBitMask = Categories.ground
         
@@ -119,13 +123,13 @@ class Scene: SKScene {
     }
 }
 
-extension Scene: SKPhysicsContactDelegate {
+extension GravityColliderScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         damage += 1
         pointLabel.text = "DAMAGE: \(damage)"
         
         let multiplier: CGFloat = 0.1
-
+        
         let diff_x: CGFloat = (frame.midX - player.position.x) * multiplier
         let diff_y: CGFloat = (frame.midY - player.position.y) * multiplier
         
@@ -139,14 +143,9 @@ extension Scene: SKPhysicsContactDelegate {
         case 17...18: player.text = "🤬"
         case 19...20: player.text = "💩"
         case 21...30: player.text = "🔥"
-
+            
         default: break
         }
     }
 }
 
-let viewFrame = CGRect(x: 0, y: 0, width: 365, height: 667)
-let view = SKView(frame: viewFrame)
-//view.showsPhysics = true
-view.presentScene(Scene(size: viewFrame.size))
-PlaygroundPage.current.liveView = view
