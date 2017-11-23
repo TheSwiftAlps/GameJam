@@ -29,6 +29,8 @@
 		525A7D071FC6F70B00FA8907 /* WildWildWestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7CFE1FC6F70B00FA8907 /* WildWildWestScene.swift */; };
 		525A7D081FC6F70B00FA8907 /* RocketGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7D001FC6F70B00FA8907 /* RocketGame.swift */; };
 		525A7D091FC6F70B00FA8907 /* RocketScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7D011FC6F70B00FA8907 /* RocketScene.swift */; };
+		63EEE3601FC71D47008B5B88 /* SmileyBilliardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EEE35F1FC71D47008B5B88 /* SmileyBilliardGame.swift */; };
+		63EEE3621FC71D8F008B5B88 /* SmileyBilliardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EEE3611FC71D8F008B5B88 /* SmileyBilliardScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		525A7CFE1FC6F70B00FA8907 /* WildWildWestScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WildWildWestScene.swift; sourceTree = "<group>"; };
 		525A7D001FC6F70B00FA8907 /* RocketGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketGame.swift; sourceTree = "<group>"; };
 		525A7D011FC6F70B00FA8907 /* RocketScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketScene.swift; sourceTree = "<group>"; };
+		63EEE35F1FC71D47008B5B88 /* SmileyBilliardGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileyBilliardGame.swift; sourceTree = "<group>"; };
+		63EEE3611FC71D8F008B5B88 /* SmileyBilliardScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileyBilliardScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		5244243C1FC0967300FA03B3 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				63EEE35E1FC71D28008B5B88 /* SmileyBilliard */,
 				525A7CF11FC6F70400FA8907 /* Asteroids */,
 				5244243F1FC096A900FA03B3 /* Demo */,
 				525A7CF91FC6F70B00FA8907 /* FireFighter */,
@@ -182,6 +187,15 @@
 			name = Rocket;
 			path = Games/Rocket;
 			sourceTree = SOURCE_ROOT;
+		};
+		63EEE35E1FC71D28008B5B88 /* SmileyBilliard */ = {
+			isa = PBXGroup;
+			children = (
+				63EEE35F1FC71D47008B5B88 /* SmileyBilliardGame.swift */,
+				63EEE3611FC71D8F008B5B88 /* SmileyBilliardScene.swift */,
+			);
+			path = SmileyBilliard;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -279,6 +293,7 @@
 				525A7CF51FC6F70400FA8907 /* AsteroidsScene.swift in Sources */,
 				525A7D091FC6F70B00FA8907 /* RocketScene.swift in Sources */,
 				525A7D061FC6F70B00FA8907 /* WildWildWestGame.swift in Sources */,
+				63EEE3621FC71D8F008B5B88 /* SmileyBilliardScene.swift in Sources */,
 				5244244C1FC0A75D00FA03B3 /* SKScene+Extensions.swift in Sources */,
 				525A7D031FC6F70B00FA8907 /* SoccerScene.swift in Sources */,
 				524424481FC0A36E00FA03B3 /* DemoScene.swift in Sources */,
@@ -290,6 +305,7 @@
 				5244244E1FC0AB0A00FA03B3 /* Array+Random.swift in Sources */,
 				525A7D041FC6F70B00FA8907 /* FireFighterGame.swift in Sources */,
 				525A7D051FC6F70B00FA8907 /* FireFighterScene.swift in Sources */,
+				63EEE3601FC71D47008B5B88 /* SmileyBilliardGame.swift in Sources */,
 				525A7D021FC6F70B00FA8907 /* SoccerGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,10 +436,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TEE39J9D8F;
+				DEVELOPMENT_TEAM = 32J4GMQCNK;
 				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftalps.game-jam";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.atipik.game-jam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -435,10 +451,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TEE39J9D8F;
+				DEVELOPMENT_TEAM = 32J4GMQCNK;
 				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftalps.game-jam";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.atipik.game-jam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

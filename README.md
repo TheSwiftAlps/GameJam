@@ -28,3 +28,7 @@ This repo uses graphics from [OpenGameArt.org](httsp://opengameart.org), specifi
 - [Red car, by sleepy_byte](https://opengameart.org/content/red-car)
 - [Rocket, by JM.Atencia](https://opengameart.org/content/rocket)
 - [Soccer Ball, by gothicfan95](https://opengameart.org/content/soccer-ball)
+
+This repo also uses graphics from other websites:
+
+- [Billiard Table](https://design.tutsplus.com/tutorials/create-a-textured-pool-table-in-adobe-illustrator--vector-4462)
