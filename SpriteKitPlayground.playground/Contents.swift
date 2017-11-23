@@ -1,7 +1,7 @@
 import SpriteKit
 import PlaygroundSupport
 
-struct Categories {
+/*struct Categories {
     static let ground: UInt32 = 1
     static let coins: UInt32 = 1 << 1
 }
@@ -78,8 +78,21 @@ extension Scene: SKPhysicsContactDelegate {
         }
     }
 }
+*/
+
+final class RocketScene: SKScene {
+
+    override func sceneDidLoad() {
+        super.sceneDidLoad()
+
+        let car = SKSpriteNode(imageNamed: "Car")
+
+        addChild(car)
+
+    }
+}
 
 let viewFrame = CGRect(x: 0, y: 0, width: 365, height: 667)
 let view = SKView(frame: viewFrame)
-view.presentScene(Scene(size: viewFrame.size))
+view.presentScene(RocketScene(size: viewFrame.size))
 PlaygroundPage.current.liveView = view
