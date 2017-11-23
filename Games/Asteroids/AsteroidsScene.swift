@@ -111,13 +111,11 @@ class AsteroidsScene: SKScene {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         super.touchesMoved(touches, with: event)
-        
-        // Just like we can get a touch location from a view, we can get it from a node as well
         guard let touchLocation = touches.first?.location(in: self) else {
             return
         }
         
-        let move = SKAction.move(to: CGPoint(x: touchLocation.x, y: 100), duration: 0.3)
+        let move = SKAction.move(to: CGPoint(x: touchLocation.x, y: 100), duration: 0.1)
         rocket.run(move)
     }
     
@@ -201,7 +199,6 @@ class AsteroidsScene: SKScene {
         let physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: laser.size.width, height: laser.size.height ))
         
         laser.physicsBody = physicsBody
-//        laser.physicsBody?.collisionBitMask = 1
         laser.physicsBody?.isDynamic = false
         laser.physicsBody?.contactTestBitMask = 1
         
