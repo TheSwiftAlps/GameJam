@@ -80,15 +80,50 @@ extension Scene: SKPhysicsContactDelegate {
 }
 */
 
-final class RocketScene: SKScene {
+final class RocketScene: SKScene, SKSceneDelegate {
+
+    private var rocket: SKSpriteNode!
+    private var asteroid: SKSpriteNode?
 
     override func sceneDidLoad() {
         super.sceneDidLoad()
 
-        let car = SKSpriteNode(imageNamed: "Car")
+        self.delegate = self
 
-        addChild(car)
+        rocket = SKSpriteNode(imageNamed: "Rocket")
+        rocket.position.x = frame.midX
+        rocket.position.y = frame.minY + rocket.frame.height/2
 
+        addChild(rocket)
+
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { [weak self] _ in
+
+            guard let scene = self else {
+                return
+            }
+
+            let asteroid = SKSpriteNode(imageNamed: "Asteroid")
+            scene.asteroid = asteroid
+            asteroid.position.x = CGFloat(arc4random_uniform(UInt32(scene.frame.maxX)))
+            asteroid.position.y = scene.frame.maxY
+            asteroid.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 50, height: 50))
+            asteroid.physicsBody?.isDynamic = false
+            scene.addChild(asteroid)
+
+            asteroid.run(.moveTo(y: -asteroid.frame.height, duration: 3)) {
+                asteroid.removeFromParent()
+            }
+        }
+    }
+
+    override func update(_ currentTime: TimeInterval) {
+
+
+        if asteroid?.frame.intersects(rocket.frame)  {
+
+
+
+        }
     }
 }
 

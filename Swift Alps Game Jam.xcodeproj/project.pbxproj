@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A1A6A481FC6E641001961B4 /* RocketGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1A6A471FC6E641001961B4 /* RocketGame.swift */; };
+		2A1A6A4A1FC6E68A001961B4 /* RocketScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1A6A491FC6E68A001961B4 /* RocketScene.swift */; };
 		524424341FC0939A00FA03B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244242E1FC0939A00FA03B3 /* AppDelegate.swift */; };
 		524424351FC0939A00FA03B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5244242F1FC0939A00FA03B3 /* Assets.xcassets */; };
 		524424361FC0939A00FA03B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524424301FC0939A00FA03B3 /* LaunchScreen.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A1A6A471FC6E641001961B4 /* RocketGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketGame.swift; sourceTree = "<group>"; };
+		2A1A6A491FC6E68A001961B4 /* RocketScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketScene.swift; sourceTree = "<group>"; };
 		524424161FC0931B00FA03B3 /* Swift Alps Game Jam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Alps Game Jam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5244242E1FC0939A00FA03B3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5244242F1FC0939A00FA03B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A1A6A461FC6E628001961B4 /* Rocket */ = {
+			isa = PBXGroup;
+			children = (
+				2A1A6A471FC6E641001961B4 /* RocketGame.swift */,
+				2A1A6A491FC6E68A001961B4 /* RocketScene.swift */,
+			);
+			path = Rocket;
+			sourceTree = "<group>";
+		};
 		5244240D1FC0931B00FA03B3 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +108,7 @@
 		5244243C1FC0967300FA03B3 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				2A1A6A461FC6E628001961B4 /* Rocket */,
 				5244243F1FC096A900FA03B3 /* Demo */,
 			);
 			path = Games;
@@ -199,6 +213,7 @@
 			files = (
 				524424461FC09DDC00FA03B3 /* GameFactory.swift in Sources */,
 				524424411FC096A900FA03B3 /* DemoGame.swift in Sources */,
+				2A1A6A4A1FC6E68A001961B4 /* RocketScene.swift in Sources */,
 				5244244C1FC0A75D00FA03B3 /* SKScene+Extensions.swift in Sources */,
 				524424481FC0A36E00FA03B3 /* DemoScene.swift in Sources */,
 				524424501FC0C48700FA03B3 /* SKNode+UserData.swift in Sources */,
@@ -206,6 +221,7 @@
 				524424371FC0939A00FA03B3 /* GameListViewController.swift in Sources */,
 				5244243A1FC0951000FA03B3 /* GameViewController.swift in Sources */,
 				524424341FC0939A00FA03B3 /* AppDelegate.swift in Sources */,
+				2A1A6A481FC6E641001961B4 /* RocketGame.swift in Sources */,
 				5244244E1FC0AB0A00FA03B3 /* Array+Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
