@@ -9,6 +9,7 @@ class Scene: SKScene {
     var coin = SKLabelNode(text: "💰")
     var enemy = SKLabelNode(text: "")
 
+    var gameOver = false
 
     override func sceneDidLoad() {
         cowboy.position.x = frame.midX
@@ -29,6 +30,10 @@ class Scene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
 
+        if cowboy.frame.intersects(enemy.frame) {
+            setStateGameOver()
+        }
+
         if cowboy.frame.intersects(coin.frame) {
             putCoinInBag()
             coin.removeFromParent()
@@ -39,6 +44,8 @@ class Scene: SKScene {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+
+        guard gameOver == false else { return }
 
         guard let touchLocation = touches.first?.location(in: self) else { return }
 
@@ -74,7 +81,8 @@ class Scene: SKScene {
     }
 
     private func addEnemie() {
-//        guard arc4random_uniform(10) < 5 else { return }
+        let randomNumber = arc4random_uniform(10)
+        guard randomNumber < 3 else { return }
 
         let enemyNode = SKLabelNode(text: enemies.random())
 
@@ -83,8 +91,20 @@ class Scene: SKScene {
         enemyNode.position.x = CGFloat(arc4random_uniform(365))
         enemyNode.position.y = CGFloat(arc4random_uniform(667))
         addChild(enemyNode)
+    }
 
+    private func setStateGameOver() {
+        gameOver = true
 
+        let boom = SKLabelNode(text: "💥")
+        cowboy.addChild(boom)
+
+        let gameOverLabel = SKLabelNode(text: "GAME OVER")
+        gameOverLabel.position.x = frame.midX
+        gameOverLabel.position.y = frame.midY
+        gameOverLabel.fontSize = 50
+        gameOverLabel.fontColor = .red
+        addChild(gameOverLabel)
     }
 }
 
