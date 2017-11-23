@@ -1,13 +1,19 @@
-import SpriteKit
-import PlaygroundSupport
+//
+//  DrinkingGameScene.swift
+//  Swift Alps Game Jam
+//
+//  Created by Sidney de Koning on 23/11/2017.
+//
 
-struct Categories {
+import SpriteKit
+
+private struct Categories {
     static let ground: UInt32 = 1
     static let coins: UInt32 = 1 << 1
 }
 
-class Scene: SKScene {
-    let player = SKSpriteNode(imageNamed: "Character")
+class DrinkingGameScene: SKScene {
+    let player = SKSpriteNode(imageNamed: "Character-Front-0")
     lazy var ground = makeGround()
     
     let scoreLabel = SKLabelNode(text: "0")
@@ -90,7 +96,7 @@ class Scene: SKScene {
     }
 }
 
-extension Scene: SKPhysicsContactDelegate {
+extension DrinkingGameScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         if contact.bodyA.node == player {
             contact.bodyB.node?.removeFromParent()
@@ -112,10 +118,8 @@ extension Scene: SKPhysicsContactDelegate {
     func goHome() {
         
         player.physicsBody?.allowsRotation = true
-//        player.physicsBody?.applyAngularImpulse(CGFloat(0.1))
-//        player.zRotation = CGFloat(Double.pi / self.score)
         
-        if self.score > 50 {
+        if self.score > 30 {
             
             self.shouldGoHome = true
             
@@ -132,13 +136,7 @@ extension Scene: SKPhysicsContactDelegate {
             // add label + add click to restart
         } else {
             
-        
+            
         }
     }
 }
-
-let viewFrame = CGRect(x: 0, y: 0, width: 365, height: 667)
-let view = SKView(frame: viewFrame)
-view.presentScene(Scene(size: viewFrame.size))
-PlaygroundPage.current.liveView = view
-
