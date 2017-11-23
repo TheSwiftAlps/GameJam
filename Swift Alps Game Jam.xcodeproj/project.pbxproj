@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2FDED5B11FC7188E00580C8B /* GravityColliderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDED5B01FC7188E00580C8B /* GravityColliderGame.swift */; };
 		2FDED5B31FC7189A00580C8B /* GravityColliderScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDED5B21FC7189A00580C8B /* GravityColliderScene.swift */; };
+		30DA4D521FC7230700966C67 /* SaveThePooGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DA4D501FC7230700966C67 /* SaveThePooGame.swift */; };
+		30DA4D531FC7230700966C67 /* PooSceene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DA4D511FC7230700966C67 /* PooSceene.swift */; };
 		37B4FE811FC711E200778A3E /* BubbleRocketGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4FE801FC711E200778A3E /* BubbleRocketGame.swift */; };
 		37B4FE831FC711ED00778A3E /* BubbleRocketScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4FE821FC711ED00778A3E /* BubbleRocketScene.swift */; };
 		524424341FC0939A00FA03B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244242E1FC0939A00FA03B3 /* AppDelegate.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		2FDED5B01FC7188E00580C8B /* GravityColliderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityColliderGame.swift; sourceTree = "<group>"; };
 		2FDED5B21FC7189A00580C8B /* GravityColliderScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityColliderScene.swift; sourceTree = "<group>"; };
+		30DA4D501FC7230700966C67 /* SaveThePooGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveThePooGame.swift; sourceTree = "<group>"; };
+		30DA4D511FC7230700966C67 /* PooSceene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PooSceene.swift; sourceTree = "<group>"; };
 		37B4FE801FC711E200778A3E /* BubbleRocketGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleRocketGame.swift; sourceTree = "<group>"; };
 		37B4FE821FC711ED00778A3E /* BubbleRocketScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleRocketScene.swift; sourceTree = "<group>"; };
 		524424161FC0931B00FA03B3 /* Swift Alps Game Jam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Alps Game Jam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +92,15 @@
 				2FDED5B21FC7189A00580C8B /* GravityColliderScene.swift */,
 			);
 			path = GravityCollider;
+			sourceTree = "<group>";
+		};
+		30DA4D4F1FC722DB00966C67 /* SaveThePoo */ = {
+			isa = PBXGroup;
+			children = (
+				30DA4D511FC7230700966C67 /* PooSceene.swift */,
+				30DA4D501FC7230700966C67 /* SaveThePooGame.swift */,
+			);
+			path = SaveThePoo;
 			sourceTree = "<group>";
 		};
 		37B4FE7F1FC711C400778A3E /* BubbleRocket */ = {
@@ -145,6 +158,7 @@
 		5244243C1FC0967300FA03B3 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				30DA4D4F1FC722DB00966C67 /* SaveThePoo */,
 				2FDED5AF1FC7186A00580C8B /* GravityCollider */,
 				B399C7FA1FC71D4000102E39 /* BubbleProtect */,
 				37B4FE7F1FC711C400778A3E /* BubbleRocket */,
@@ -331,6 +345,7 @@
 				524424501FC0C48700FA03B3 /* SKNode+UserData.swift in Sources */,
 				524424431FC0972A00FA03B3 /* Game.swift in Sources */,
 				37B4FE831FC711ED00778A3E /* BubbleRocketScene.swift in Sources */,
+				30DA4D521FC7230700966C67 /* SaveThePooGame.swift in Sources */,
 				524424371FC0939A00FA03B3 /* GameListViewController.swift in Sources */,
 				5244243A1FC0951000FA03B3 /* GameViewController.swift in Sources */,
 				B399C7FE1FC71E2B00102E39 /* BubbleProtectScene.swift in Sources */,
@@ -339,6 +354,7 @@
 				525A7D041FC6F70B00FA8907 /* FireFighterGame.swift in Sources */,
 				525A7D051FC6F70B00FA8907 /* FireFighterScene.swift in Sources */,
 				525A7D021FC6F70B00FA8907 /* SoccerGame.swift in Sources */,
+				30DA4D531FC7230700966C67 /* PooSceene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
