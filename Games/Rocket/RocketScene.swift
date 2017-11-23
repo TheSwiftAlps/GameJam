@@ -48,6 +48,24 @@ final class RocketScene: SKScene, SKSceneDelegate, SKPhysicsContactDelegate {
                 asteroid.removeFromParent()
             }
         }
+        
+        Timer.scheduledTimer(withTimeInterval: 0.4, repeats: true) { [weak self] _ in
+            
+            guard let scene = self else {
+                return
+            }
+            
+            let asteroid_background = SKSpriteNode(imageNamed: "Asteroid")
+            asteroid_background.scale(to: CGSize(width: 5, height: 5))
+            
+            asteroid_background.position.x = CGFloat(arc4random_uniform(UInt32(scene.frame.maxX)))
+            asteroid_background.position.y = scene.frame.maxY
+            scene.addChild(asteroid_background)
+            
+            asteroid_background.run(.moveTo(y: -asteroid_background.frame.height, duration: TimeInterval(arc4random_uniform(UInt32(4))))) {
+                asteroid_background.removeFromParent()
+            }
+        }
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
