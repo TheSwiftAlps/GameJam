@@ -3,22 +3,30 @@ import PlaygroundSupport
 
 class Scene: SKScene {
     let cowboy = SKLabelNode(text: "🤠")
+    let moneyBag = SKLabelNode(text: "💰")
     let coins = ["💰", "💵", "💴", "💶", "💷", "💎"]
     var coin = SKLabelNode(text: "💰")
 
     override func sceneDidLoad() {
         cowboy.position.x = frame.midX
         cowboy.position.y = frame.midY
-        addChild(cowboy)
 
+        addChild(cowboy)
         addCoin()
+
+        moneyBag.fontSize = 0
+        moneyBag.alpha = 0
+
+        cowboy.addChild(moneyBag)
+        moneyBag.position.x = -12
+        moneyBag.position.y = -20
     }
 
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
 
         if cowboy.frame.intersects(coin.frame) {
-            // BOOM
+            putCoinInBag()
             coin.removeFromParent()
             addCoin()
         }
@@ -27,7 +35,22 @@ class Scene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
 
-        cowboy.run(.move(to: touches.first!.location(in: self), duration: 2.0))
+        guard let touchLocation = touches.first?.location(in: self) else { return }
+
+        let distance = distanceBetweenPoint(cowboy.position, andOtherPoint: touchLocation)
+
+        let duration = TimeInterval(0.005 * distance)
+
+        cowboy.run(.move(to: touchLocation , duration: duration))
+    }
+
+    private func putCoinInBag() {
+        moneyBag.alpha = 1
+        moneyBag.fontSize = moneyBag.fontSize + 1
+    }
+
+    private func distanceBetweenPoint(_ point1: CGPoint, andOtherPoint point2: CGPoint) -> Float {
+        return hypotf(Float(point2.x - point1.x), Float(point2.y - point1.y))
     }
 
     private func makeGround() -> SKShapeNode {
