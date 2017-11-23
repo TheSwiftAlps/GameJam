@@ -5,7 +5,10 @@ class Scene: SKScene {
     let cowboy = SKLabelNode(text: "🤠")
     let moneyBag = SKLabelNode(text: "💰")
     let coins = ["💰", "💵", "💴", "💶", "💷", "💎"]
+    let enemies = ["🐍", "🦂", "🦈", "👻"]
     var coin = SKLabelNode(text: "💰")
+    var enemy = SKLabelNode(text: "")
+
 
     override func sceneDidLoad() {
         cowboy.position.x = frame.midX
@@ -13,6 +16,7 @@ class Scene: SKScene {
 
         addChild(cowboy)
         addCoin()
+        addEnemie()
 
         moneyBag.fontSize = 0
         moneyBag.alpha = 0
@@ -29,6 +33,7 @@ class Scene: SKScene {
             putCoinInBag()
             coin.removeFromParent()
             addCoin()
+            addEnemie()
         }
     }
 
@@ -66,6 +71,20 @@ class Scene: SKScene {
         coinNode.position.x = CGFloat(arc4random_uniform(365))
         coinNode.position.y = CGFloat(arc4random_uniform(667))
         addChild(coinNode)
+    }
+
+    private func addEnemie() {
+//        guard arc4random_uniform(10) < 5 else { return }
+
+        let enemyNode = SKLabelNode(text: enemies.random())
+
+         self.enemy = enemyNode
+
+        enemyNode.position.x = CGFloat(arc4random_uniform(365))
+        enemyNode.position.y = CGFloat(arc4random_uniform(667))
+        addChild(enemyNode)
+
+
     }
 }
 
