@@ -41,6 +41,7 @@ class VolcanoCannonScene: SKScene {
         mountain.position.x = frame.midX
         mountain.position.y = 30
         addChild(mountain)
+        physicsWorld.contactDelegate = self
     }
     
     private func createHouse(_ house:SKSpriteNode, x:CGFloat) {
