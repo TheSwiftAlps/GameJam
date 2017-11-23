@@ -35,6 +35,8 @@
 		525A7D071FC6F70B00FA8907 /* WildWildWestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7CFE1FC6F70B00FA8907 /* WildWildWestScene.swift */; };
 		525A7D081FC6F70B00FA8907 /* RocketGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7D001FC6F70B00FA8907 /* RocketGame.swift */; };
 		525A7D091FC6F70B00FA8907 /* RocketScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7D011FC6F70B00FA8907 /* RocketScene.swift */; };
+		63EEE3601FC71D47008B5B88 /* SmileyBilliardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EEE35F1FC71D47008B5B88 /* SmileyBilliardGame.swift */; };
+		63EEE3621FC71D8F008B5B88 /* SmileyBilliardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EEE3611FC71D8F008B5B88 /* SmileyBilliardScene.swift */; };
 		63E4025A1FC73D350011EB47 /* JumpHighScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E402581FC73D350011EB47 /* JumpHighScene.swift */; };
 		63E4025B1FC73D350011EB47 /* JumpHighGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E402591FC73D350011EB47 /* JumpHighGame.swift */; };
 		664B45781FC73F7500119635 /* VolcanoCannonGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B45761FC73C5700119635 /* VolcanoCannonGame.swift */; };
@@ -80,6 +82,8 @@
 		525A7CFE1FC6F70B00FA8907 /* WildWildWestScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WildWildWestScene.swift; sourceTree = "<group>"; };
 		525A7D001FC6F70B00FA8907 /* RocketGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketGame.swift; sourceTree = "<group>"; };
 		525A7D011FC6F70B00FA8907 /* RocketScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketScene.swift; sourceTree = "<group>"; };
+		63EEE35F1FC71D47008B5B88 /* SmileyBilliardGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileyBilliardGame.swift; sourceTree = "<group>"; };
+		63EEE3611FC71D8F008B5B88 /* SmileyBilliardScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileyBilliardScene.swift; sourceTree = "<group>"; };
 		63E402581FC73D350011EB47 /* JumpHighScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JumpHighScene.swift; path = Games/JumpHigh/JumpHighScene.swift; sourceTree = SOURCE_ROOT; };
 		63E402591FC73D350011EB47 /* JumpHighGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JumpHighGame.swift; path = Games/JumpHigh/JumpHighGame.swift; sourceTree = SOURCE_ROOT; };
 		664B45761FC73C5700119635 /* VolcanoCannonGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolcanoCannonGame.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 		5244243C1FC0967300FA03B3 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				63EEE35E1FC71D28008B5B88 /* SmileyBilliard */,
 				63E402571FC73D1D0011EB47 /* JumpHigh */,
 				2ED16E941FC72B2F0038650A /* Drinking */,
 				FEC0DBCB1FC73A46001474A9 /* DeathStar */,
@@ -255,6 +260,13 @@
 			path = Games/Rocket;
 			sourceTree = SOURCE_ROOT;
 		};
+		63EEE35E1FC71D28008B5B88 /* SmileyBilliard */ = {
+			isa = PBXGroup;
+			children = (
+				63EEE35F1FC71D47008B5B88 /* SmileyBilliardGame.swift */,
+				63EEE3611FC71D8F008B5B88 /* SmileyBilliardScene.swift */,
+			);
+			path = SmileyBilliard;
 		63E402571FC73D1D0011EB47 /* JumpHigh */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +423,7 @@
 				525A7D091FC6F70B00FA8907 /* RocketScene.swift in Sources */,
 				B399C7FD1FC71E2800102E39 /* BubbleProtectGame.swift in Sources */,
 				525A7D061FC6F70B00FA8907 /* WildWildWestGame.swift in Sources */,
+				63EEE3621FC71D8F008B5B88 /* SmileyBilliardScene.swift in Sources */,
 				5244244C1FC0A75D00FA03B3 /* SKScene+Extensions.swift in Sources */,
 				525A7D031FC6F70B00FA8907 /* SoccerScene.swift in Sources */,
 				2FDED5B11FC7188E00580C8B /* GravityColliderGame.swift in Sources */,
@@ -431,6 +444,7 @@
 				525A7D041FC6F70B00FA8907 /* FireFighterGame.swift in Sources */,
 				FEC0DBCD1FC73A69001474A9 /* DeathStarGame.swift in Sources */,
 				525A7D051FC6F70B00FA8907 /* FireFighterScene.swift in Sources */,
+				63EEE3601FC71D47008B5B88 /* SmileyBilliardGame.swift in Sources */,
 				525A7D021FC6F70B00FA8907 /* SoccerGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
