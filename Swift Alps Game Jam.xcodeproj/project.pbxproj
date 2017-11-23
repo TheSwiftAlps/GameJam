@@ -35,6 +35,8 @@
 		525A7D091FC6F70B00FA8907 /* RocketScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7D011FC6F70B00FA8907 /* RocketScene.swift */; };
 		B399C7FD1FC71E2800102E39 /* BubbleProtectGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399C7FB1FC71D5000102E39 /* BubbleProtectGame.swift */; };
 		B399C7FE1FC71E2B00102E39 /* BubbleProtectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399C7FC1FC71D5000102E39 /* BubbleProtectScene.swift */; };
+		DC2B4B381FC7241300F3A1E2 /* CarGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2B4B361FC7241200F3A1E2 /* CarGame.swift */; };
+		DC2B4B391FC7241300F3A1E2 /* CarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2B4B371FC7241200F3A1E2 /* CarScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		525A7D011FC6F70B00FA8907 /* RocketScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketScene.swift; sourceTree = "<group>"; };
 		B399C7FB1FC71D5000102E39 /* BubbleProtectGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleProtectGame.swift; sourceTree = "<group>"; };
 		B399C7FC1FC71D5000102E39 /* BubbleProtectScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleProtectScene.swift; sourceTree = "<group>"; };
+		DC2B4B361FC7241200F3A1E2 /* CarGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarGame.swift; sourceTree = "<group>"; };
+		DC2B4B371FC7241200F3A1E2 /* CarScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 		5244243C1FC0967300FA03B3 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				DC2B4B351FC7241200F3A1E2 /* Car */,
 				2FDED5AF1FC7186A00580C8B /* GravityCollider */,
 				B399C7FA1FC71D4000102E39 /* BubbleProtect */,
 				37B4FE7F1FC711C400778A3E /* BubbleRocket */,
@@ -223,6 +228,15 @@
 				B399C7FC1FC71D5000102E39 /* BubbleProtectScene.swift */,
 			);
 			path = BubbleProtect;
+			sourceTree = "<group>";
+		};
+		DC2B4B351FC7241200F3A1E2 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				DC2B4B361FC7241200F3A1E2 /* CarGame.swift */,
+				DC2B4B371FC7241200F3A1E2 /* CarScene.swift */,
+			);
+			path = Car;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,12 +344,14 @@
 				524424481FC0A36E00FA03B3 /* DemoScene.swift in Sources */,
 				524424501FC0C48700FA03B3 /* SKNode+UserData.swift in Sources */,
 				524424431FC0972A00FA03B3 /* Game.swift in Sources */,
+				DC2B4B391FC7241300F3A1E2 /* CarScene.swift in Sources */,
 				37B4FE831FC711ED00778A3E /* BubbleRocketScene.swift in Sources */,
 				524424371FC0939A00FA03B3 /* GameListViewController.swift in Sources */,
 				5244243A1FC0951000FA03B3 /* GameViewController.swift in Sources */,
 				B399C7FE1FC71E2B00102E39 /* BubbleProtectScene.swift in Sources */,
 				524424341FC0939A00FA03B3 /* AppDelegate.swift in Sources */,
 				5244244E1FC0AB0A00FA03B3 /* Array+Random.swift in Sources */,
+				DC2B4B381FC7241300F3A1E2 /* CarGame.swift in Sources */,
 				525A7D041FC6F70B00FA8907 /* FireFighterGame.swift in Sources */,
 				525A7D051FC6F70B00FA8907 /* FireFighterScene.swift in Sources */,
 				525A7D021FC6F70B00FA8907 /* SoccerGame.swift in Sources */,
