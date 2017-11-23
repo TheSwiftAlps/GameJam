@@ -13,6 +13,8 @@
 		4BAAB1A11FC6F0C2003FB0C4 /* SoccerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAAB1A01FC6F0C2003FB0C4 /* SoccerScene.swift */; };
 		35869F181FC6D93000140AF4 /* AsteroidsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35869F171FC6D93000140AF4 /* AsteroidsScene.swift */; };
 		35869F1A1FC6DB0E00140AF4 /* AsteroidsGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35869F191FC6DB0E00140AF4 /* AsteroidsGame.swift */; };
+		35AA14921FC6F1AF006E519B /* AsteroidsGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AA14901FC6F1AF006E519B /* AsteroidsGame.swift */; };
+		35AA14931FC6F1AF006E519B /* AsteroidsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AA14911FC6F1AF006E519B /* AsteroidsScene.swift */; };
 		524424341FC0939A00FA03B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244242E1FC0939A00FA03B3 /* AppDelegate.swift */; };
 		524424351FC0939A00FA03B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5244242F1FC0939A00FA03B3 /* Assets.xcassets */; };
 		524424361FC0939A00FA03B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524424301FC0939A00FA03B3 /* LaunchScreen.storyboard */; };
@@ -34,6 +36,8 @@
 		4BAAB1A01FC6F0C2003FB0C4 /* SoccerScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerScene.swift; sourceTree = "<group>"; };
 		35869F171FC6D93000140AF4 /* AsteroidsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsScene.swift; sourceTree = "<group>"; };
 		35869F191FC6DB0E00140AF4 /* AsteroidsGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidsGame.swift; sourceTree = "<group>"; };
+		35AA14901FC6F1AF006E519B /* AsteroidsGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidsGame.swift; sourceTree = "<group>"; };
+		35AA14911FC6F1AF006E519B /* AsteroidsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidsScene.swift; sourceTree = "<group>"; };
 		524424161FC0931B00FA03B3 /* Swift Alps Game Jam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Alps Game Jam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5244242E1FC0939A00FA03B3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5244242F1FC0939A00FA03B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,11 +72,13 @@
 				2A1A6A491FC6E68A001961B4 /* RocketScene.swift */,
 			);
 			path = Rocket;
-		35869F161FC6D91F00140AF4 /* Asteroids */ = {
+			sourceTree = "<group>";
+		};
+		35AA148F1FC6F1AF006E519B /* Asteroids */ = {
 			isa = PBXGroup;
 			children = (
-				35869F171FC6D93000140AF4 /* AsteroidsScene.swift */,
-				35869F191FC6DB0E00140AF4 /* AsteroidsGame.swift */,
+				35AA14901FC6F1AF006E519B /* AsteroidsGame.swift */,
+				35AA14911FC6F1AF006E519B /* AsteroidsScene.swift */,
 			);
 			path = Asteroids;
 			sourceTree = "<group>";
@@ -133,8 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				4BAAB19D1FC6F082003FB0C4 /* Soccer */,
+				35AA148F1FC6F1AF006E519B /* Asteroids */,
 				2A1A6A461FC6E628001961B4 /* Rocket */,
-				35869F161FC6D91F00140AF4 /* Asteroids */,
 				5244243F1FC096A900FA03B3 /* Demo */,
 			);
 			path = Games;
@@ -246,8 +252,10 @@
 				524424501FC0C48700FA03B3 /* SKNode+UserData.swift in Sources */,
 				524424431FC0972A00FA03B3 /* Game.swift in Sources */,
 				524424371FC0939A00FA03B3 /* GameListViewController.swift in Sources */,
+				35AA14921FC6F1AF006E519B /* AsteroidsGame.swift in Sources */,
 				5244243A1FC0951000FA03B3 /* GameViewController.swift in Sources */,
 				524424341FC0939A00FA03B3 /* AppDelegate.swift in Sources */,
+				35AA14931FC6F1AF006E519B /* AsteroidsScene.swift in Sources */,
 				2A1A6A481FC6E641001961B4 /* RocketGame.swift in Sources */,
 				5244244E1FC0AB0A00FA03B3 /* Array+Random.swift in Sources */,
 				4BAAB19F1FC6F093003FB0C4 /* SoccerGame.swift in Sources */,
