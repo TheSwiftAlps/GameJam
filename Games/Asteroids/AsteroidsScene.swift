@@ -1,11 +1,44 @@
 import Foundation
 import SpriteKit
 
+
+extension AsteroidsScene: SKPhysicsContactDelegate {
+
+    func didBegin(_ contact: SKPhysicsContact) {
+        if contact.bodyA.node == rocket || contact.bodyB.node == rocket {
+            
+            [contact.bodyA, contact.bodyB].filter { $0.node != rocket }.forEach { $0.node?.removeFromParent() }
+            
+            let textures: [SKTexture] = [
+                SKTexture(imageNamed: "Explosion-0"),
+                SKTexture(imageNamed: "Explosion-1"),
+                SKTexture(imageNamed: "Explosion-2"),
+                SKTexture(imageNamed: "Explosion-3"),
+                SKTexture(imageNamed: "Explosion-4"),
+                SKTexture(imageNamed: "Explosion-5"),
+                SKTexture(imageNamed: "Explosion-6")
+            ]
+            rocket.run(.animate(with: textures, timePerFrame: 0.05)) {
+                self.rocket.removeFromParent()
+                self.removeAllActions()
+                self.removeAllChildren()
+                self.addGameOver()
+            }
+        }
+    }
+    
+    func didEnd(_ contact: SKPhysicsContact) {
+        
+    }
+    
+}
+
 /// Scene for the demo game.
-final class AsteroidsScene: SKScene {
+class AsteroidsScene: SKScene {
 
     private var score = 0
     private lazy var scoreLabel = SKLabelNode()
+    private lazy var rocket = SKSpriteNode(imageNamed: "Rocket")
     
     // MARK: - SKScene
     
@@ -24,6 +57,7 @@ final class AsteroidsScene: SKScene {
             })
             ])))
         spawnRocket()
+        physicsWorld.contactDelegate = self
     }
     
     // This is called when the scene has moved to its view
@@ -39,7 +73,8 @@ final class AsteroidsScene: SKScene {
     }
     
     // This is called when the user began touching the screen
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
         super.touchesBegan(touches, with: event)
         
         // Just like we can get a touch location from a view, we can get it from a node as well
@@ -47,26 +82,8 @@ final class AsteroidsScene: SKScene {
             return
         }
         
-        guard let node = nodes(at: touchLocation).first as? SKLabelNode else {
-            return
-        }
-        
-        // Make sure that we're not causing the score label to explode
-        guard node.isEmoji else {
-            return
-        }
-        
-        // By removing the node's physics body and all actions, we cause it to stop
-        node.physicsBody = nil
-        node.removeAllActions()
-        node.text = "💥"
-        
-        node.run(.fadeOut(withDuration: 0.5)) { [weak node] in
-            node?.removeFromParent()
-        }
-        
-        score += 100
-        scoreLabel.text = "SCORE: \(score)"
+        let move = SKAction.move(to: CGPoint(x: touchLocation.x, y: 100), duration: 0.3)
+        rocket.run(move)
     }
     
     // MARK: - Private
@@ -87,8 +104,8 @@ final class AsteroidsScene: SKScene {
         asteroid.position.y = size.height
         
         // A physics body enables our node to be affected by gravity
-        let physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: asteroid.size.width / 2, height: asteroid.size.height / 2))
-        physicsBody.collisionBitMask = 0
+        let physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: asteroid.size.width, height: asteroid.size.height ))
+        physicsBody.collisionBitMask = 1
         asteroid.physicsBody = physicsBody
         
         // An impulse applies a direct force to the emoji, causing it to shoot upwards
@@ -107,26 +124,31 @@ final class AsteroidsScene: SKScene {
     }
     
     private func spawnRocket() {
-        let rocket = SKSpriteNode(imageNamed: "Rocket")
         rocket.setScale(1.0)
-
         addChild(rocket)
-        
-        // Put the emoji at a random X position (as long as its completely within the scene)
-        // Then put it right below the scene (in SpriteKit, y=0 means the bottom)
+
         rocket.position.x = size.height / 2
-        
         rocket.position.y = 100
         
         let physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: rocket.size.width, height: rocket.size.height))
         physicsBody.collisionBitMask = 0
         rocket.physicsBody = physicsBody
         rocket.physicsBody?.isDynamic = false
+        rocket.physicsBody?.contactTestBitMask = 1
+        
         
 //        rocket.run(actionGroup) { [weak rocket] in
 //            rocket?.removeFromParent()
 //        }
     }
+    
+    private func addGameOver() {
+        let label = SKLabelNode(text: "Game Over!!!")
+        label.position = center
+        addChild(label)
+    }
+    
+
 }
 
 

@@ -15,6 +15,7 @@ final class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        gameView.showsPhysics = true
         view.addSubview(gameView)
     }
 
