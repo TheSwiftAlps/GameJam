@@ -33,6 +33,8 @@
 		525A7D071FC6F70B00FA8907 /* WildWildWestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7CFE1FC6F70B00FA8907 /* WildWildWestScene.swift */; };
 		525A7D081FC6F70B00FA8907 /* RocketGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7D001FC6F70B00FA8907 /* RocketGame.swift */; };
 		525A7D091FC6F70B00FA8907 /* RocketScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7D011FC6F70B00FA8907 /* RocketScene.swift */; };
+		664B45781FC73F7500119635 /* VolcanoCannonGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B45761FC73C5700119635 /* VolcanoCannonGame.swift */; };
+		664B45791FC73F7800119635 /* VolcanoCannonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B45771FC73C5700119635 /* VolcanoCannonScene.swift */; };
 		B399C7FD1FC71E2800102E39 /* BubbleProtectGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399C7FB1FC71D5000102E39 /* BubbleProtectGame.swift */; };
 		B399C7FE1FC71E2B00102E39 /* BubbleProtectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399C7FC1FC71D5000102E39 /* BubbleProtectScene.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		525A7CFE1FC6F70B00FA8907 /* WildWildWestScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WildWildWestScene.swift; sourceTree = "<group>"; };
 		525A7D001FC6F70B00FA8907 /* RocketGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketGame.swift; sourceTree = "<group>"; };
 		525A7D011FC6F70B00FA8907 /* RocketScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketScene.swift; sourceTree = "<group>"; };
+		664B45761FC73C5700119635 /* VolcanoCannonGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolcanoCannonGame.swift; sourceTree = "<group>"; };
+		664B45771FC73C5700119635 /* VolcanoCannonScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolcanoCannonScene.swift; sourceTree = "<group>"; };
 		B399C7FB1FC71D5000102E39 /* BubbleProtectGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleProtectGame.swift; sourceTree = "<group>"; };
 		B399C7FC1FC71D5000102E39 /* BubbleProtectScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleProtectScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +149,7 @@
 		5244243C1FC0967300FA03B3 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				664B45751FC73C3200119635 /* VolcanoCannon */,
 				2FDED5AF1FC7186A00580C8B /* GravityCollider */,
 				B399C7FA1FC71D4000102E39 /* BubbleProtect */,
 				37B4FE7F1FC711C400778A3E /* BubbleRocket */,
@@ -215,6 +220,15 @@
 			name = Rocket;
 			path = Games/Rocket;
 			sourceTree = SOURCE_ROOT;
+		};
+		664B45751FC73C3200119635 /* VolcanoCannon */ = {
+			isa = PBXGroup;
+			children = (
+				664B45761FC73C5700119635 /* VolcanoCannonGame.swift */,
+				664B45771FC73C5700119635 /* VolcanoCannonScene.swift */,
+			);
+			path = VolcanoCannon;
+			sourceTree = "<group>";
 		};
 		B399C7FA1FC71D4000102E39 /* BubbleProtect */ = {
 			isa = PBXGroup;
@@ -313,9 +327,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				664B45781FC73F7500119635 /* VolcanoCannonGame.swift in Sources */,
 				525A7D081FC6F70B00FA8907 /* RocketGame.swift in Sources */,
 				525A7CF41FC6F70400FA8907 /* AsteroidsGame.swift in Sources */,
 				37B4FE811FC711E200778A3E /* BubbleRocketGame.swift in Sources */,
+				664B45791FC73F7800119635 /* VolcanoCannonScene.swift in Sources */,
 				524424461FC09DDC00FA03B3 /* GameFactory.swift in Sources */,
 				524424411FC096A900FA03B3 /* DemoGame.swift in Sources */,
 				525A7D071FC6F70B00FA8907 /* WildWildWestScene.swift in Sources */,
