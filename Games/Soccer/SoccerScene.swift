@@ -7,14 +7,14 @@
 
 import SpriteKit
 
-struct Categories {
+private struct Categories {
     static let ground: UInt32 = 1
     static let ball: UInt32 = 1 << 1
     static let player: UInt32 = 1 << 2
 }
 
-class Scene: SKScene {
-    let player = SKSpriteNode(imageNamed: "Character")
+class SoccerScene: SKScene {
+    let player = SKSpriteNode(imageNamed: "Character-Front-0")
     lazy var ground = makeGround()
     var ballCount = 10
     private lazy var scoreLabel = SKLabelNode()
@@ -58,11 +58,6 @@ class Scene: SKScene {
         scoreLabel.horizontalAlignmentMode = .left
         scoreLabel.text = "Score: \(gameScore)"
         addChild(scoreLabel)
-    }
-    
-    /// Return a random X position within the scene
-    func randomXPosition() -> CGFloat {
-        return CGFloat(arc4random_uniform(UInt32(size.width)))
     }
     
     func createBall() {
@@ -116,7 +111,7 @@ class Scene: SKScene {
     }
 }
 
-extension Scene: SKPhysicsContactDelegate {
+extension SoccerScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         
         if gameScore == 3 {
