@@ -27,6 +27,8 @@
 		5244244C1FC0A75D00FA03B3 /* SKScene+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244244B1FC0A75D00FA03B3 /* SKScene+Extensions.swift */; };
 		5244244E1FC0AB0A00FA03B3 /* Array+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244244D1FC0AB0A00FA03B3 /* Array+Random.swift */; };
 		524424501FC0C48700FA03B3 /* SKNode+UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244244F1FC0C48700FA03B3 /* SKNode+UserData.swift */; };
+		D27071731FC6EDF0007914DE /* WildWildWestGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27071721FC6EDF0007914DE /* WildWildWestGame.swift */; };
+		D27071751FC6EDFC007914DE /* WildWildWestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27071741FC6EDFC007914DE /* WildWildWestScene.swift */; };
 		99D6B9881FC6EAA700F497A0 /* FireFighterGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D6B9871FC6EAA700F497A0 /* FireFighterGame.swift */; };
 		99D6B98A1FC6EAF500F497A0 /* FireFighterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D6B9891FC6EAF500F497A0 /* FireFighterScene.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		5244244B1FC0A75D00FA03B3 /* SKScene+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+Extensions.swift"; sourceTree = "<group>"; };
 		5244244D1FC0AB0A00FA03B3 /* Array+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Random.swift"; sourceTree = "<group>"; };
 		5244244F1FC0C48700FA03B3 /* SKNode+UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+UserData.swift"; sourceTree = "<group>"; };
+		D27071721FC6EDF0007914DE /* WildWildWestGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildWildWestGame.swift; sourceTree = "<group>"; };
+		D27071741FC6EDFC007914DE /* WildWildWestScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildWildWestScene.swift; sourceTree = "<group>"; };
 		99D6B9871FC6EAA700F497A0 /* FireFighterGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireFighterGame.swift; sourceTree = "<group>"; };
 		99D6B9891FC6EAF500F497A0 /* FireFighterScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireFighterScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +146,7 @@
 		5244243C1FC0967300FA03B3 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				D27071711FC6ECEA007914DE /* WildWildWest */,
 				99D6B9861FC6EA8B00F497A0 /* FireFighter */,
 				4BAAB19D1FC6F082003FB0C4 /* Soccer */,
 				35AA148F1FC6F1AF006E519B /* Asteroids */,
@@ -160,6 +165,13 @@
 			path = Demo;
 			sourceTree = "<group>";
 		};
+		D27071711FC6ECEA007914DE /* WildWildWest */ = {
+			isa = PBXGroup;
+			children = (
+				D27071721FC6EDF0007914DE /* WildWildWestGame.swift */,
+				D27071741FC6EDFC007914DE /* WildWildWestScene.swift */,
+			);
+			path = WildWildWest;
 		99D6B9861FC6EA8B00F497A0 /* FireFighter */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,8 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D27071731FC6EDF0007914DE /* WildWildWestGame.swift in Sources */,
 				524424461FC09DDC00FA03B3 /* GameFactory.swift in Sources */,
 				524424411FC096A900FA03B3 /* DemoGame.swift in Sources */,
+				D27071751FC6EDFC007914DE /* WildWildWestScene.swift in Sources */,
 				2A1A6A4A1FC6E68A001961B4 /* RocketScene.swift in Sources */,
 				5244244C1FC0A75D00FA03B3 /* SKScene+Extensions.swift in Sources */,
 				524424481FC0A36E00FA03B3 /* DemoScene.swift in Sources */,
