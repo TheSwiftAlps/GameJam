@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E33EC051FC73AB600480320 /* DrinkingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33EC041FC73AB600480320 /* DrinkingGame.swift */; };
+		2E33EC071FC73AFD00480320 /* DrinkingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33EC061FC73AFC00480320 /* DrinkingGameScene.swift */; };
 		2FDED5B11FC7188E00580C8B /* GravityColliderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDED5B01FC7188E00580C8B /* GravityColliderGame.swift */; };
 		2FDED5B31FC7189A00580C8B /* GravityColliderScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDED5B21FC7189A00580C8B /* GravityColliderScene.swift */; };
 		37B4FE811FC711E200778A3E /* BubbleRocketGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4FE801FC711E200778A3E /* BubbleRocketGame.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E33EC041FC73AB600480320 /* DrinkingGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkingGame.swift; sourceTree = "<group>"; };
+		2E33EC061FC73AFC00480320 /* DrinkingGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkingGameScene.swift; sourceTree = "<group>"; };
 		2FDED5B01FC7188E00580C8B /* GravityColliderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityColliderGame.swift; sourceTree = "<group>"; };
 		2FDED5B21FC7189A00580C8B /* GravityColliderScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityColliderScene.swift; sourceTree = "<group>"; };
 		37B4FE801FC711E200778A3E /* BubbleRocketGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleRocketGame.swift; sourceTree = "<group>"; };
@@ -97,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2ED16E941FC72B2F0038650A /* Drinking */ = {
+			isa = PBXGroup;
+			children = (
+				2E33EC041FC73AB600480320 /* DrinkingGame.swift */,
+				2E33EC061FC73AFC00480320 /* DrinkingGameScene.swift */,
+			);
+			path = Drinking;
+			sourceTree = "<group>";
+		};
 		2FDED5AF1FC7186A00580C8B /* GravityCollider */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +174,7 @@
 		5244243C1FC0967300FA03B3 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				2ED16E941FC72B2F0038650A /* Drinking */,
 				FEC0DBCB1FC73A46001474A9 /* DeathStar */,
 				664B45751FC73C3200119635 /* VolcanoCannon */,
 				DC2B4B351FC7241200F3A1E2 /* Car */,
@@ -373,6 +387,7 @@
 				37B4FE811FC711E200778A3E /* BubbleRocketGame.swift in Sources */,
 				664B45791FC73F7800119635 /* VolcanoCannonScene.swift in Sources */,
 				524424461FC09DDC00FA03B3 /* GameFactory.swift in Sources */,
+				2E33EC071FC73AFD00480320 /* DrinkingGameScene.swift in Sources */,
 				524424411FC096A900FA03B3 /* DemoGame.swift in Sources */,
 				525A7D071FC6F70B00FA8907 /* WildWildWestScene.swift in Sources */,
 				525A7CF51FC6F70400FA8907 /* AsteroidsScene.swift in Sources */,
@@ -388,6 +403,7 @@
 				524424431FC0972A00FA03B3 /* Game.swift in Sources */,
 				DC2B4B391FC7241300F3A1E2 /* CarScene.swift in Sources */,
 				37B4FE831FC711ED00778A3E /* BubbleRocketScene.swift in Sources */,
+				2E33EC051FC73AB600480320 /* DrinkingGame.swift in Sources */,
 				524424371FC0939A00FA03B3 /* GameListViewController.swift in Sources */,
 				5244243A1FC0951000FA03B3 /* GameViewController.swift in Sources */,
 				B399C7FE1FC71E2B00102E39 /* BubbleProtectScene.swift in Sources */,
