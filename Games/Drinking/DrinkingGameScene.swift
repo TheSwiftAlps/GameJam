@@ -126,6 +126,7 @@ extension DrinkingGameScene: SKPhysicsContactDelegate {
             self.goHomeLabel.position.x = self.frame.midX
             self.goHomeLabel.position.y = self.frame.midY
             self.goHomeLabel.fontSize = 140
+            self.scoreLabel.fontSize = 24
             self.scoreLabel.text = "You are drunk, go dancing!"
             
             if self.goHomeLabel.parent == nil {
