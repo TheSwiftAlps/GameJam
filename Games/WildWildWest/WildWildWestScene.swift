@@ -6,10 +6,19 @@ final class WildWildWestScene: SKScene {
     let coins = ["💰", "💵", "💴", "💶", "💷", "💎"]
     let enemies = ["🐍", "🦂", "🦈", "👻", "🕳"]
     var coin = SKLabelNode(text: "💰")
-    var enemy = SKLabelNode(text: "")
+    var enemyArray = [SKLabelNode]()
     var gameOver = false
     var score = 0
     let scoreLabel = SKLabelNode(text: "0")
+
+    func randomXPos() -> CGFloat {
+        return CGFloat(arc4random_uniform(UInt32(view?.safeAreaLayoutGuide.layoutFrame.width ?? frame.midX))) + (view?.safeAreaLayoutGuide.layoutFrame.minX ?? 0)
+    }
+
+
+    func randomYPos() -> CGFloat {
+        return CGFloat(arc4random_uniform(UInt32(view?.safeAreaLayoutGuide.layoutFrame.width ?? frame.midX))) + (view?.safeAreaLayoutGuide.layoutFrame.minX ?? 0)
+    }
 
     override func sceneDidLoad() {
         drawScoreBoard()
@@ -31,8 +40,11 @@ final class WildWildWestScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
 
-        if cowboy.frame.intersects(enemy.frame) {
-            setStateGameOver()
+        for enemy in enemyArray {
+            if cowboy.frame.intersects(enemy.frame) {
+                setStateGameOver()
+                break
+            }
         }
 
         if cowboy.frame.intersects(coin.frame) {
@@ -85,8 +97,8 @@ final class WildWildWestScene: SKScene {
 
         self.coin = coinNode
 
-        coinNode.position.x = CGFloat(arc4random_uniform(365))
-        coinNode.position.y = CGFloat(arc4random_uniform(667))
+        coinNode.position.x = randomXPos()
+        coinNode.position.y = randomYPos()
         addChild(coinNode)
     }
 
@@ -96,10 +108,10 @@ final class WildWildWestScene: SKScene {
 
         let enemyNode = SKLabelNode(text: enemies.random())
 
-        self.enemy = enemyNode
+        self.enemyArray.append(enemyNode)
 
-        enemyNode.position.x = CGFloat(arc4random_uniform(365))
-        enemyNode.position.y = CGFloat(arc4random_uniform(667))
+        enemyNode.position.x = randomXPos()
+        enemyNode.position.y = randomYPos()
         addChild(enemyNode)
     }
 
