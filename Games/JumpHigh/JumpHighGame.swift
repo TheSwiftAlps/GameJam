@@ -14,6 +14,6 @@ final class JumpHighGame: Game {
     var authors: [String] { return ["Florin Voicu", "George Muntean"] }
     
     func makeScene() -> SKScene {
-        return GravityColliderScene(size: UIScreen.main.bounds.size)
+        return JumpHighScene(size: UIScreen.main.bounds.size)
     }
 }

@@ -13,7 +13,7 @@ private struct Categories {
 }
 
 class JumpHighScene: SKScene {
-    let player = SKSpriteNode(imageNamed: "Character")
+    let player = SKSpriteNode(imageNamed: "Character-Front-0")
     lazy var ground = makeGround()
     var flyingGrounds = [SKSpriteNode]()
     
