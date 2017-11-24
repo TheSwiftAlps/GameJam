@@ -7,57 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E33EC051FC73AB600480320 /* DrinkingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33EC041FC73AB600480320 /* DrinkingGame.swift */; };
-		2E33EC071FC73AFD00480320 /* DrinkingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E33EC061FC73AFC00480320 /* DrinkingGameScene.swift */; };
-		2FDED5B11FC7188E00580C8B /* GravityColliderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDED5B01FC7188E00580C8B /* GravityColliderGame.swift */; };
-		2FDED5B31FC7189A00580C8B /* GravityColliderScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDED5B21FC7189A00580C8B /* GravityColliderScene.swift */; };
-		37B4FE811FC711E200778A3E /* BubbleRocketGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4FE801FC711E200778A3E /* BubbleRocketGame.swift */; };
-		37B4FE831FC711ED00778A3E /* BubbleRocketScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4FE821FC711ED00778A3E /* BubbleRocketScene.swift */; };
 		524424341FC0939A00FA03B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244242E1FC0939A00FA03B3 /* AppDelegate.swift */; };
 		524424351FC0939A00FA03B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5244242F1FC0939A00FA03B3 /* Assets.xcassets */; };
 		524424361FC0939A00FA03B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524424301FC0939A00FA03B3 /* LaunchScreen.storyboard */; };
 		524424371FC0939A00FA03B3 /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524424321FC0939A00FA03B3 /* GameListViewController.swift */; };
 		5244243A1FC0951000FA03B3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524424391FC0951000FA03B3 /* GameViewController.swift */; };
-		524424411FC096A900FA03B3 /* DemoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524424401FC096A900FA03B3 /* DemoGame.swift */; };
 		524424431FC0972A00FA03B3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524424421FC0972A00FA03B3 /* Game.swift */; };
 		524424461FC09DDC00FA03B3 /* GameFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524424451FC09DDC00FA03B3 /* GameFactory.swift */; };
-		524424481FC0A36E00FA03B3 /* DemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524424471FC0A36E00FA03B3 /* DemoScene.swift */; };
 		5244244C1FC0A75D00FA03B3 /* SKScene+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244244B1FC0A75D00FA03B3 /* SKScene+Extensions.swift */; };
 		5244244E1FC0AB0A00FA03B3 /* Array+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244244D1FC0AB0A00FA03B3 /* Array+Random.swift */; };
 		524424501FC0C48700FA03B3 /* SKNode+UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244244F1FC0C48700FA03B3 /* SKNode+UserData.swift */; };
-		525A7CF41FC6F70400FA8907 /* AsteroidsGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7CF21FC6F70400FA8907 /* AsteroidsGame.swift */; };
-		525A7CF51FC6F70400FA8907 /* AsteroidsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7CF31FC6F70400FA8907 /* AsteroidsScene.swift */; };
-		525A7D021FC6F70B00FA8907 /* SoccerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7CF71FC6F70B00FA8907 /* SoccerGame.swift */; };
-		525A7D031FC6F70B00FA8907 /* SoccerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7CF81FC6F70B00FA8907 /* SoccerScene.swift */; };
-		525A7D041FC6F70B00FA8907 /* FireFighterGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7CFA1FC6F70B00FA8907 /* FireFighterGame.swift */; };
-		525A7D051FC6F70B00FA8907 /* FireFighterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7CFB1FC6F70B00FA8907 /* FireFighterScene.swift */; };
-		525A7D061FC6F70B00FA8907 /* WildWildWestGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7CFD1FC6F70B00FA8907 /* WildWildWestGame.swift */; };
-		525A7D071FC6F70B00FA8907 /* WildWildWestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7CFE1FC6F70B00FA8907 /* WildWildWestScene.swift */; };
-		525A7D081FC6F70B00FA8907 /* RocketGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7D001FC6F70B00FA8907 /* RocketGame.swift */; };
-		525A7D091FC6F70B00FA8907 /* RocketScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A7D011FC6F70B00FA8907 /* RocketScene.swift */; };
-		63EEE3601FC71D47008B5B88 /* SmileyBilliardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EEE35F1FC71D47008B5B88 /* SmileyBilliardGame.swift */; };
-		63EEE3621FC71D8F008B5B88 /* SmileyBilliardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EEE3611FC71D8F008B5B88 /* SmileyBilliardScene.swift */; };
-		63E4025A1FC73D350011EB47 /* JumpHighScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E402581FC73D350011EB47 /* JumpHighScene.swift */; };
-		63E4025B1FC73D350011EB47 /* JumpHighGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E402591FC73D350011EB47 /* JumpHighGame.swift */; };
-		664B45781FC73F7500119635 /* VolcanoCannonGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B45761FC73C5700119635 /* VolcanoCannonGame.swift */; };
-		664B45791FC73F7800119635 /* VolcanoCannonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B45771FC73C5700119635 /* VolcanoCannonScene.swift */; };
-		A0020DA81FC739F700B2CDA7 /* CakeKillerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0020DA61FC739F700B2CDA7 /* CakeKillerGame.swift */; };
-		A0020DA91FC739F700B2CDA7 /* CakeKillerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0020DA71FC739F700B2CDA7 /* CakeKillerScene.swift */; };
-		B399C7FD1FC71E2800102E39 /* BubbleProtectGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399C7FB1FC71D5000102E39 /* BubbleProtectGame.swift */; };
-		B399C7FE1FC71E2B00102E39 /* BubbleProtectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B399C7FC1FC71D5000102E39 /* BubbleProtectScene.swift */; };
-		FEC0DBCD1FC73A69001474A9 /* DeathStarGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0DBCC1FC73A69001474A9 /* DeathStarGame.swift */; };
-		FEC0DBCF1FC73A8A001474A9 /* DeathStarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0DBCE1FC73A8A001474A9 /* DeathStarScene.swift */; };
-		DC2B4B381FC7241300F3A1E2 /* CarGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2B4B361FC7241200F3A1E2 /* CarGame.swift */; };
-		DC2B4B391FC7241300F3A1E2 /* CarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2B4B371FC7241200F3A1E2 /* CarScene.swift */; };
+		52E7250C1FC856290099FCC7 /* AsteroidsGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724DD1FC856280099FCC7 /* AsteroidsGame.swift */; };
+		52E7250D1FC856290099FCC7 /* AsteroidsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724DE1FC856280099FCC7 /* AsteroidsScene.swift */; };
+		52E7250E1FC856290099FCC7 /* GravityColliderGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724E01FC856280099FCC7 /* GravityColliderGame.swift */; };
+		52E7250F1FC856290099FCC7 /* GravityColliderScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724E11FC856280099FCC7 /* GravityColliderScene.swift */; };
+		52E725101FC856290099FCC7 /* SoccerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724E31FC856280099FCC7 /* SoccerGame.swift */; };
+		52E725111FC856290099FCC7 /* SoccerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724E41FC856280099FCC7 /* SoccerScene.swift */; };
+		52E725121FC856290099FCC7 /* WildWildWestGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724E61FC856280099FCC7 /* WildWildWestGame.swift */; };
+		52E725131FC856290099FCC7 /* WildWildWestScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724E71FC856280099FCC7 /* WildWildWestScene.swift */; };
+		52E725141FC856290099FCC7 /* RocketGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724E91FC856280099FCC7 /* RocketGame.swift */; };
+		52E725151FC856290099FCC7 /* RocketScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724EA1FC856280099FCC7 /* RocketScene.swift */; };
+		52E725161FC856290099FCC7 /* CarGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724EC1FC856280099FCC7 /* CarGame.swift */; };
+		52E725171FC856290099FCC7 /* CarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724ED1FC856280099FCC7 /* CarScene.swift */; };
+		52E725181FC856290099FCC7 /* BubbleProtectGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724EF1FC856280099FCC7 /* BubbleProtectGame.swift */; };
+		52E725191FC856290099FCC7 /* BubbleProtectScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724F01FC856280099FCC7 /* BubbleProtectScene.swift */; };
+		52E7251A1FC856290099FCC7 /* FireFighterGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724F21FC856280099FCC7 /* FireFighterGame.swift */; };
+		52E7251B1FC856290099FCC7 /* FireFighterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724F31FC856280099FCC7 /* FireFighterScene.swift */; };
+		52E7251C1FC856290099FCC7 /* DeathStarGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724F51FC856280099FCC7 /* DeathStarGame.swift */; };
+		52E7251D1FC856290099FCC7 /* DeathStarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724F61FC856280099FCC7 /* DeathStarScene.swift */; };
+		52E7251E1FC856290099FCC7 /* VolcanoCannonGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724F81FC856280099FCC7 /* VolcanoCannonGame.swift */; };
+		52E7251F1FC856290099FCC7 /* VolcanoCannonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724F91FC856280099FCC7 /* VolcanoCannonScene.swift */; };
+		52E725201FC856290099FCC7 /* JumpHighGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724FB1FC856280099FCC7 /* JumpHighGame.swift */; };
+		52E725211FC856290099FCC7 /* JumpHighScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724FC1FC856280099FCC7 /* JumpHighScene.swift */; };
+		52E725221FC856290099FCC7 /* CakeKillerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724FE1FC856280099FCC7 /* CakeKillerGame.swift */; };
+		52E725231FC856290099FCC7 /* CakeKillerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E724FF1FC856280099FCC7 /* CakeKillerScene.swift */; };
+		52E725241FC856290099FCC7 /* BubbleRocketGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E725011FC856280099FCC7 /* BubbleRocketGame.swift */; };
+		52E725251FC856290099FCC7 /* BubbleRocketScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E725021FC856280099FCC7 /* BubbleRocketScene.swift */; };
+		52E725261FC856290099FCC7 /* DemoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E725041FC856290099FCC7 /* DemoGame.swift */; };
+		52E725271FC856290099FCC7 /* DemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E725051FC856290099FCC7 /* DemoScene.swift */; };
+		52E725281FC856290099FCC7 /* DrinkingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E725071FC856290099FCC7 /* DrinkingGame.swift */; };
+		52E725291FC856290099FCC7 /* DrinkingGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E725081FC856290099FCC7 /* DrinkingGameScene.swift */; };
+		52E7252A1FC856290099FCC7 /* SmileyBilliardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7250A1FC856290099FCC7 /* SmileyBilliardGame.swift */; };
+		52E7252B1FC856290099FCC7 /* SmileyBilliardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7250B1FC856290099FCC7 /* SmileyBilliardScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E33EC041FC73AB600480320 /* DrinkingGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkingGame.swift; sourceTree = "<group>"; };
-		2E33EC061FC73AFC00480320 /* DrinkingGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkingGameScene.swift; sourceTree = "<group>"; };
-		2FDED5B01FC7188E00580C8B /* GravityColliderGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityColliderGame.swift; sourceTree = "<group>"; };
-		2FDED5B21FC7189A00580C8B /* GravityColliderScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravityColliderScene.swift; sourceTree = "<group>"; };
-		37B4FE801FC711E200778A3E /* BubbleRocketGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleRocketGame.swift; sourceTree = "<group>"; };
-		37B4FE821FC711ED00778A3E /* BubbleRocketScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleRocketScene.swift; sourceTree = "<group>"; };
 		524424161FC0931B00FA03B3 /* Swift Alps Game Jam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Alps Game Jam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5244242E1FC0939A00FA03B3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5244242F1FC0939A00FA03B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,37 +59,43 @@
 		524424321FC0939A00FA03B3 /* GameListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
 		524424331FC0939A00FA03B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		524424391FC0951000FA03B3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		524424401FC096A900FA03B3 /* DemoGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoGame.swift; sourceTree = "<group>"; };
 		524424421FC0972A00FA03B3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		524424451FC09DDC00FA03B3 /* GameFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameFactory.swift; sourceTree = "<group>"; };
-		524424471FC0A36E00FA03B3 /* DemoScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoScene.swift; sourceTree = "<group>"; };
 		5244244B1FC0A75D00FA03B3 /* SKScene+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+Extensions.swift"; sourceTree = "<group>"; };
 		5244244D1FC0AB0A00FA03B3 /* Array+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Random.swift"; sourceTree = "<group>"; };
 		5244244F1FC0C48700FA03B3 /* SKNode+UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKNode+UserData.swift"; sourceTree = "<group>"; };
-		525A7CF21FC6F70400FA8907 /* AsteroidsGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidsGame.swift; sourceTree = "<group>"; };
-		525A7CF31FC6F70400FA8907 /* AsteroidsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidsScene.swift; sourceTree = "<group>"; };
-		525A7CF71FC6F70B00FA8907 /* SoccerGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoccerGame.swift; sourceTree = "<group>"; };
-		525A7CF81FC6F70B00FA8907 /* SoccerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoccerScene.swift; sourceTree = "<group>"; };
-		525A7CFA1FC6F70B00FA8907 /* FireFighterGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireFighterGame.swift; sourceTree = "<group>"; };
-		525A7CFB1FC6F70B00FA8907 /* FireFighterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireFighterScene.swift; sourceTree = "<group>"; };
-		525A7CFD1FC6F70B00FA8907 /* WildWildWestGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WildWildWestGame.swift; sourceTree = "<group>"; };
-		525A7CFE1FC6F70B00FA8907 /* WildWildWestScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WildWildWestScene.swift; sourceTree = "<group>"; };
-		525A7D001FC6F70B00FA8907 /* RocketGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketGame.swift; sourceTree = "<group>"; };
-		525A7D011FC6F70B00FA8907 /* RocketScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketScene.swift; sourceTree = "<group>"; };
-		63EEE35F1FC71D47008B5B88 /* SmileyBilliardGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileyBilliardGame.swift; sourceTree = "<group>"; };
-		63EEE3611FC71D8F008B5B88 /* SmileyBilliardScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileyBilliardScene.swift; sourceTree = "<group>"; };
-		63E402581FC73D350011EB47 /* JumpHighScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JumpHighScene.swift; path = Games/JumpHigh/JumpHighScene.swift; sourceTree = SOURCE_ROOT; };
-		63E402591FC73D350011EB47 /* JumpHighGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JumpHighGame.swift; path = Games/JumpHigh/JumpHighGame.swift; sourceTree = SOURCE_ROOT; };
-		664B45761FC73C5700119635 /* VolcanoCannonGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolcanoCannonGame.swift; sourceTree = "<group>"; };
-		664B45771FC73C5700119635 /* VolcanoCannonScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolcanoCannonScene.swift; sourceTree = "<group>"; };
-		A0020DA61FC739F700B2CDA7 /* CakeKillerGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CakeKillerGame.swift; sourceTree = "<group>"; };
-		A0020DA71FC739F700B2CDA7 /* CakeKillerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CakeKillerScene.swift; sourceTree = "<group>"; };
-		B399C7FB1FC71D5000102E39 /* BubbleProtectGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleProtectGame.swift; sourceTree = "<group>"; };
-		B399C7FC1FC71D5000102E39 /* BubbleProtectScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleProtectScene.swift; sourceTree = "<group>"; };
-		FEC0DBCC1FC73A69001474A9 /* DeathStarGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathStarGame.swift; sourceTree = "<group>"; };
-		FEC0DBCE1FC73A8A001474A9 /* DeathStarScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathStarScene.swift; sourceTree = "<group>"; };
-		DC2B4B361FC7241200F3A1E2 /* CarGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarGame.swift; sourceTree = "<group>"; };
-		DC2B4B371FC7241200F3A1E2 /* CarScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarScene.swift; sourceTree = "<group>"; };
+		52E724DD1FC856280099FCC7 /* AsteroidsGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidsGame.swift; sourceTree = "<group>"; };
+		52E724DE1FC856280099FCC7 /* AsteroidsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidsScene.swift; sourceTree = "<group>"; };
+		52E724E01FC856280099FCC7 /* GravityColliderGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityColliderGame.swift; sourceTree = "<group>"; };
+		52E724E11FC856280099FCC7 /* GravityColliderScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravityColliderScene.swift; sourceTree = "<group>"; };
+		52E724E31FC856280099FCC7 /* SoccerGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoccerGame.swift; sourceTree = "<group>"; };
+		52E724E41FC856280099FCC7 /* SoccerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoccerScene.swift; sourceTree = "<group>"; };
+		52E724E61FC856280099FCC7 /* WildWildWestGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WildWildWestGame.swift; sourceTree = "<group>"; };
+		52E724E71FC856280099FCC7 /* WildWildWestScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WildWildWestScene.swift; sourceTree = "<group>"; };
+		52E724E91FC856280099FCC7 /* RocketGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketGame.swift; sourceTree = "<group>"; };
+		52E724EA1FC856280099FCC7 /* RocketScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RocketScene.swift; sourceTree = "<group>"; };
+		52E724EC1FC856280099FCC7 /* CarGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarGame.swift; sourceTree = "<group>"; };
+		52E724ED1FC856280099FCC7 /* CarScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarScene.swift; sourceTree = "<group>"; };
+		52E724EF1FC856280099FCC7 /* BubbleProtectGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleProtectGame.swift; sourceTree = "<group>"; };
+		52E724F01FC856280099FCC7 /* BubbleProtectScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleProtectScene.swift; sourceTree = "<group>"; };
+		52E724F21FC856280099FCC7 /* FireFighterGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireFighterGame.swift; sourceTree = "<group>"; };
+		52E724F31FC856280099FCC7 /* FireFighterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireFighterScene.swift; sourceTree = "<group>"; };
+		52E724F51FC856280099FCC7 /* DeathStarGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathStarGame.swift; sourceTree = "<group>"; };
+		52E724F61FC856280099FCC7 /* DeathStarScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathStarScene.swift; sourceTree = "<group>"; };
+		52E724F81FC856280099FCC7 /* VolcanoCannonGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolcanoCannonGame.swift; sourceTree = "<group>"; };
+		52E724F91FC856280099FCC7 /* VolcanoCannonScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolcanoCannonScene.swift; sourceTree = "<group>"; };
+		52E724FB1FC856280099FCC7 /* JumpHighGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpHighGame.swift; sourceTree = "<group>"; };
+		52E724FC1FC856280099FCC7 /* JumpHighScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpHighScene.swift; sourceTree = "<group>"; };
+		52E724FE1FC856280099FCC7 /* CakeKillerGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CakeKillerGame.swift; sourceTree = "<group>"; };
+		52E724FF1FC856280099FCC7 /* CakeKillerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CakeKillerScene.swift; sourceTree = "<group>"; };
+		52E725011FC856280099FCC7 /* BubbleRocketGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleRocketGame.swift; sourceTree = "<group>"; };
+		52E725021FC856280099FCC7 /* BubbleRocketScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleRocketScene.swift; sourceTree = "<group>"; };
+		52E725041FC856290099FCC7 /* DemoGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoGame.swift; sourceTree = "<group>"; };
+		52E725051FC856290099FCC7 /* DemoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoScene.swift; sourceTree = "<group>"; };
+		52E725071FC856290099FCC7 /* DrinkingGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkingGame.swift; sourceTree = "<group>"; };
+		52E725081FC856290099FCC7 /* DrinkingGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkingGameScene.swift; sourceTree = "<group>"; };
+		52E7250A1FC856290099FCC7 /* SmileyBilliardGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileyBilliardGame.swift; sourceTree = "<group>"; };
+		52E7250B1FC856290099FCC7 /* SmileyBilliardScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileyBilliardScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,33 +109,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2ED16E941FC72B2F0038650A /* Drinking */ = {
-			isa = PBXGroup;
-			children = (
-				2E33EC041FC73AB600480320 /* DrinkingGame.swift */,
-				2E33EC061FC73AFC00480320 /* DrinkingGameScene.swift */,
-			);
-			path = Drinking;
-			sourceTree = "<group>";
-		};
-		2FDED5AF1FC7186A00580C8B /* GravityCollider */ = {
-			isa = PBXGroup;
-			children = (
-				2FDED5B01FC7188E00580C8B /* GravityColliderGame.swift */,
-				2FDED5B21FC7189A00580C8B /* GravityColliderScene.swift */,
-			);
-			path = GravityCollider;
-			sourceTree = "<group>";
-		};
-		37B4FE7F1FC711C400778A3E /* BubbleRocket */ = {
-			isa = PBXGroup;
-			children = (
-				37B4FE801FC711E200778A3E /* BubbleRocketGame.swift */,
-				37B4FE821FC711ED00778A3E /* BubbleRocketScene.swift */,
-			);
-			path = BubbleRocket;
-			sourceTree = "<group>";
-		};
 		5244240D1FC0931B00FA03B3 = {
 			isa = PBXGroup;
 			children = (
@@ -182,140 +155,168 @@
 		5244243C1FC0967300FA03B3 /* Games */ = {
 			isa = PBXGroup;
 			children = (
-				63EEE35E1FC71D28008B5B88 /* SmileyBilliard */,
-				63E402571FC73D1D0011EB47 /* JumpHigh */,
-				2ED16E941FC72B2F0038650A /* Drinking */,
-				FEC0DBCB1FC73A46001474A9 /* DeathStar */,
-				664B45751FC73C3200119635 /* VolcanoCannon */,
-				DC2B4B351FC7241200F3A1E2 /* Car */,
-				2FDED5AF1FC7186A00580C8B /* GravityCollider */,
-				B399C7FA1FC71D4000102E39 /* BubbleProtect */,
-				37B4FE7F1FC711C400778A3E /* BubbleRocket */,
-				A0020DA51FC739F700B2CDA7 /* CakeKiller */,
-				525A7CF11FC6F70400FA8907 /* Asteroids */,
-				5244243F1FC096A900FA03B3 /* Demo */,
-				525A7CF91FC6F70B00FA8907 /* FireFighter */,
-				525A7CFF1FC6F70B00FA8907 /* Rocket */,
-				525A7CF61FC6F70B00FA8907 /* Soccer */,
-				525A7CFC1FC6F70B00FA8907 /* WildWildWest */,
+				52E724DC1FC856280099FCC7 /* Asteroids */,
+				52E724EE1FC856280099FCC7 /* BubbleProtect */,
+				52E725001FC856280099FCC7 /* BubbleRocket */,
+				52E724FD1FC856280099FCC7 /* CakeKiller */,
+				52E724EB1FC856280099FCC7 /* Car */,
+				52E724F41FC856280099FCC7 /* DeathStar */,
+				52E725031FC856290099FCC7 /* Demo */,
+				52E725061FC856290099FCC7 /* Drinking */,
+				52E724F11FC856280099FCC7 /* FireFighter */,
+				52E724DF1FC856280099FCC7 /* GravityCollider */,
+				52E724FA1FC856280099FCC7 /* JumpHigh */,
+				52E724E81FC856280099FCC7 /* Rocket */,
+				52E725091FC856290099FCC7 /* SmileyBilliard */,
+				52E724E21FC856280099FCC7 /* Soccer */,
+				52E724F71FC856280099FCC7 /* VolcanoCannon */,
+				52E724E51FC856280099FCC7 /* WildWildWest */,
 			);
 			path = Games;
 			sourceTree = "<group>";
 		};
-		5244243F1FC096A900FA03B3 /* Demo */ = {
+		52E724DC1FC856280099FCC7 /* Asteroids */ = {
 			isa = PBXGroup;
 			children = (
-				524424401FC096A900FA03B3 /* DemoGame.swift */,
-				524424471FC0A36E00FA03B3 /* DemoScene.swift */,
-			);
-			path = Demo;
-			sourceTree = "<group>";
-		};
-		525A7CF11FC6F70400FA8907 /* Asteroids */ = {
-			isa = PBXGroup;
-			children = (
-				525A7CF21FC6F70400FA8907 /* AsteroidsGame.swift */,
-				525A7CF31FC6F70400FA8907 /* AsteroidsScene.swift */,
+				52E724DD1FC856280099FCC7 /* AsteroidsGame.swift */,
+				52E724DE1FC856280099FCC7 /* AsteroidsScene.swift */,
 			);
 			path = Asteroids;
 			sourceTree = "<group>";
 		};
-		525A7CF61FC6F70B00FA8907 /* Soccer */ = {
+		52E724DF1FC856280099FCC7 /* GravityCollider */ = {
 			isa = PBXGroup;
 			children = (
-				525A7CF71FC6F70B00FA8907 /* SoccerGame.swift */,
-				525A7CF81FC6F70B00FA8907 /* SoccerScene.swift */,
+				52E724E01FC856280099FCC7 /* GravityColliderGame.swift */,
+				52E724E11FC856280099FCC7 /* GravityColliderScene.swift */,
 			);
-			name = Soccer;
-			path = Games/Soccer;
-			sourceTree = SOURCE_ROOT;
-		};
-		525A7CF91FC6F70B00FA8907 /* FireFighter */ = {
-			isa = PBXGroup;
-			children = (
-				525A7CFA1FC6F70B00FA8907 /* FireFighterGame.swift */,
-				525A7CFB1FC6F70B00FA8907 /* FireFighterScene.swift */,
-			);
-			name = FireFighter;
-			path = Games/FireFighter;
-			sourceTree = SOURCE_ROOT;
-		};
-		525A7CFC1FC6F70B00FA8907 /* WildWildWest */ = {
-			isa = PBXGroup;
-			children = (
-				525A7CFD1FC6F70B00FA8907 /* WildWildWestGame.swift */,
-				525A7CFE1FC6F70B00FA8907 /* WildWildWestScene.swift */,
-			);
-			name = WildWildWest;
-			path = Games/WildWildWest;
-			sourceTree = SOURCE_ROOT;
-		};
-		525A7CFF1FC6F70B00FA8907 /* Rocket */ = {
-			isa = PBXGroup;
-			children = (
-				525A7D001FC6F70B00FA8907 /* RocketGame.swift */,
-				525A7D011FC6F70B00FA8907 /* RocketScene.swift */,
-			);
-			name = Rocket;
-			path = Games/Rocket;
-			sourceTree = SOURCE_ROOT;
-		};
-		63EEE35E1FC71D28008B5B88 /* SmileyBilliard */ = {
-			isa = PBXGroup;
-			children = (
-				63EEE35F1FC71D47008B5B88 /* SmileyBilliardGame.swift */,
-				63EEE3611FC71D8F008B5B88 /* SmileyBilliardScene.swift */,
-			);
-			path = SmileyBilliard;
-		63E402571FC73D1D0011EB47 /* JumpHigh */ = {
-			isa = PBXGroup;
-			children = (
-				63E402591FC73D350011EB47 /* JumpHighGame.swift */,
-				63E402581FC73D350011EB47 /* JumpHighScene.swift */,
-			);
-			name = JumpHigh;
-			path = "New Group";
+			path = GravityCollider;
 			sourceTree = "<group>";
 		};
-		664B45751FC73C3200119635 /* VolcanoCannon */ = {
+		52E724E21FC856280099FCC7 /* Soccer */ = {
 			isa = PBXGroup;
 			children = (
-				664B45761FC73C5700119635 /* VolcanoCannonGame.swift */,
-				664B45771FC73C5700119635 /* VolcanoCannonScene.swift */,
+				52E724E31FC856280099FCC7 /* SoccerGame.swift */,
+				52E724E41FC856280099FCC7 /* SoccerScene.swift */,
 			);
-			path = VolcanoCannon;
-		A0020DA51FC739F700B2CDA7 /* CakeKiller */ = {
-			isa = PBXGroup;
-			children = (
-				A0020DA61FC739F700B2CDA7 /* CakeKillerGame.swift */,
-				A0020DA71FC739F700B2CDA7 /* CakeKillerScene.swift */,
-			);
-			path = CakeKiller;
+			path = Soccer;
 			sourceTree = "<group>";
 		};
-		B399C7FA1FC71D4000102E39 /* BubbleProtect */ = {
+		52E724E51FC856280099FCC7 /* WildWildWest */ = {
 			isa = PBXGroup;
 			children = (
-				B399C7FB1FC71D5000102E39 /* BubbleProtectGame.swift */,
-				B399C7FC1FC71D5000102E39 /* BubbleProtectScene.swift */,
+				52E724E61FC856280099FCC7 /* WildWildWestGame.swift */,
+				52E724E71FC856280099FCC7 /* WildWildWestScene.swift */,
+			);
+			path = WildWildWest;
+			sourceTree = "<group>";
+		};
+		52E724E81FC856280099FCC7 /* Rocket */ = {
+			isa = PBXGroup;
+			children = (
+				52E724E91FC856280099FCC7 /* RocketGame.swift */,
+				52E724EA1FC856280099FCC7 /* RocketScene.swift */,
+			);
+			path = Rocket;
+			sourceTree = "<group>";
+		};
+		52E724EB1FC856280099FCC7 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				52E724EC1FC856280099FCC7 /* CarGame.swift */,
+				52E724ED1FC856280099FCC7 /* CarScene.swift */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
+		52E724EE1FC856280099FCC7 /* BubbleProtect */ = {
+			isa = PBXGroup;
+			children = (
+				52E724EF1FC856280099FCC7 /* BubbleProtectGame.swift */,
+				52E724F01FC856280099FCC7 /* BubbleProtectScene.swift */,
 			);
 			path = BubbleProtect;
 			sourceTree = "<group>";
 		};
-		FEC0DBCB1FC73A46001474A9 /* DeathStar */ = {
+		52E724F11FC856280099FCC7 /* FireFighter */ = {
 			isa = PBXGroup;
 			children = (
-				FEC0DBCC1FC73A69001474A9 /* DeathStarGame.swift */,
-				FEC0DBCE1FC73A8A001474A9 /* DeathStarScene.swift */,
+				52E724F21FC856280099FCC7 /* FireFighterGame.swift */,
+				52E724F31FC856280099FCC7 /* FireFighterScene.swift */,
+			);
+			path = FireFighter;
+			sourceTree = "<group>";
+		};
+		52E724F41FC856280099FCC7 /* DeathStar */ = {
+			isa = PBXGroup;
+			children = (
+				52E724F51FC856280099FCC7 /* DeathStarGame.swift */,
+				52E724F61FC856280099FCC7 /* DeathStarScene.swift */,
 			);
 			path = DeathStar;
-		DC2B4B351FC7241200F3A1E2 /* Car */ = {
+			sourceTree = "<group>";
+		};
+		52E724F71FC856280099FCC7 /* VolcanoCannon */ = {
 			isa = PBXGroup;
 			children = (
-				DC2B4B361FC7241200F3A1E2 /* CarGame.swift */,
-				DC2B4B371FC7241200F3A1E2 /* CarScene.swift */,
+				52E724F81FC856280099FCC7 /* VolcanoCannonGame.swift */,
+				52E724F91FC856280099FCC7 /* VolcanoCannonScene.swift */,
 			);
-			path = Car;
+			path = VolcanoCannon;
+			sourceTree = "<group>";
+		};
+		52E724FA1FC856280099FCC7 /* JumpHigh */ = {
+			isa = PBXGroup;
+			children = (
+				52E724FB1FC856280099FCC7 /* JumpHighGame.swift */,
+				52E724FC1FC856280099FCC7 /* JumpHighScene.swift */,
+			);
+			path = JumpHigh;
+			sourceTree = "<group>";
+		};
+		52E724FD1FC856280099FCC7 /* CakeKiller */ = {
+			isa = PBXGroup;
+			children = (
+				52E724FE1FC856280099FCC7 /* CakeKillerGame.swift */,
+				52E724FF1FC856280099FCC7 /* CakeKillerScene.swift */,
+			);
+			path = CakeKiller;
+			sourceTree = "<group>";
+		};
+		52E725001FC856280099FCC7 /* BubbleRocket */ = {
+			isa = PBXGroup;
+			children = (
+				52E725011FC856280099FCC7 /* BubbleRocketGame.swift */,
+				52E725021FC856280099FCC7 /* BubbleRocketScene.swift */,
+			);
+			path = BubbleRocket;
+			sourceTree = "<group>";
+		};
+		52E725031FC856290099FCC7 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				52E725041FC856290099FCC7 /* DemoGame.swift */,
+				52E725051FC856290099FCC7 /* DemoScene.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		52E725061FC856290099FCC7 /* Drinking */ = {
+			isa = PBXGroup;
+			children = (
+				52E725071FC856290099FCC7 /* DrinkingGame.swift */,
+				52E725081FC856290099FCC7 /* DrinkingGameScene.swift */,
+			);
+			path = Drinking;
+			sourceTree = "<group>";
+		};
+		52E725091FC856290099FCC7 /* SmileyBilliard */ = {
+			isa = PBXGroup;
+			children = (
+				52E7250A1FC856290099FCC7 /* SmileyBilliardGame.swift */,
+				52E7250B1FC856290099FCC7 /* SmileyBilliardScene.swift */,
+			);
+			path = SmileyBilliard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,7 +351,7 @@
 				TargetAttributes = {
 					524424151FC0931B00FA03B3 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -406,46 +407,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				664B45781FC73F7500119635 /* VolcanoCannonGame.swift in Sources */,
-				525A7D081FC6F70B00FA8907 /* RocketGame.swift in Sources */,
-				63E4025A1FC73D350011EB47 /* JumpHighScene.swift in Sources */,
-				FEC0DBCF1FC73A8A001474A9 /* DeathStarScene.swift in Sources */,
-				A0020DA91FC739F700B2CDA7 /* CakeKillerScene.swift in Sources */,
-				63E4025B1FC73D350011EB47 /* JumpHighGame.swift in Sources */,
-				525A7CF41FC6F70400FA8907 /* AsteroidsGame.swift in Sources */,
-				37B4FE811FC711E200778A3E /* BubbleRocketGame.swift in Sources */,
-				664B45791FC73F7800119635 /* VolcanoCannonScene.swift in Sources */,
+				52E7251E1FC856290099FCC7 /* VolcanoCannonGame.swift in Sources */,
 				524424461FC09DDC00FA03B3 /* GameFactory.swift in Sources */,
-				2E33EC071FC73AFD00480320 /* DrinkingGameScene.swift in Sources */,
-				524424411FC096A900FA03B3 /* DemoGame.swift in Sources */,
-				525A7D071FC6F70B00FA8907 /* WildWildWestScene.swift in Sources */,
-				525A7CF51FC6F70400FA8907 /* AsteroidsScene.swift in Sources */,
-				525A7D091FC6F70B00FA8907 /* RocketScene.swift in Sources */,
-				B399C7FD1FC71E2800102E39 /* BubbleProtectGame.swift in Sources */,
-				525A7D061FC6F70B00FA8907 /* WildWildWestGame.swift in Sources */,
-				63EEE3621FC71D8F008B5B88 /* SmileyBilliardScene.swift in Sources */,
+				52E7250C1FC856290099FCC7 /* AsteroidsGame.swift in Sources */,
+				52E725151FC856290099FCC7 /* RocketScene.swift in Sources */,
+				52E7251F1FC856290099FCC7 /* VolcanoCannonScene.swift in Sources */,
+				52E725121FC856290099FCC7 /* WildWildWestGame.swift in Sources */,
+				52E725131FC856290099FCC7 /* WildWildWestScene.swift in Sources */,
+				52E725171FC856290099FCC7 /* CarScene.swift in Sources */,
+				52E725261FC856290099FCC7 /* DemoGame.swift in Sources */,
+				52E725141FC856290099FCC7 /* RocketGame.swift in Sources */,
+				52E725181FC856290099FCC7 /* BubbleProtectGame.swift in Sources */,
 				5244244C1FC0A75D00FA03B3 /* SKScene+Extensions.swift in Sources */,
-				525A7D031FC6F70B00FA8907 /* SoccerScene.swift in Sources */,
-				2FDED5B11FC7188E00580C8B /* GravityColliderGame.swift in Sources */,
-				2FDED5B31FC7189A00580C8B /* GravityColliderScene.swift in Sources */,
-				524424481FC0A36E00FA03B3 /* DemoScene.swift in Sources */,
+				52E725161FC856290099FCC7 /* CarGame.swift in Sources */,
+				52E7250F1FC856290099FCC7 /* GravityColliderScene.swift in Sources */,
+				52E7250D1FC856290099FCC7 /* AsteroidsScene.swift in Sources */,
+				52E725241FC856290099FCC7 /* BubbleRocketGame.swift in Sources */,
+				52E725111FC856290099FCC7 /* SoccerScene.swift in Sources */,
 				524424501FC0C48700FA03B3 /* SKNode+UserData.swift in Sources */,
 				524424431FC0972A00FA03B3 /* Game.swift in Sources */,
-				DC2B4B391FC7241300F3A1E2 /* CarScene.swift in Sources */,
-				37B4FE831FC711ED00778A3E /* BubbleRocketScene.swift in Sources */,
-				2E33EC051FC73AB600480320 /* DrinkingGame.swift in Sources */,
+				52E7251A1FC856290099FCC7 /* FireFighterGame.swift in Sources */,
 				524424371FC0939A00FA03B3 /* GameListViewController.swift in Sources */,
+				52E725191FC856290099FCC7 /* BubbleProtectScene.swift in Sources */,
+				52E7252A1FC856290099FCC7 /* SmileyBilliardGame.swift in Sources */,
+				52E7250E1FC856290099FCC7 /* GravityColliderGame.swift in Sources */,
+				52E7252B1FC856290099FCC7 /* SmileyBilliardScene.swift in Sources */,
+				52E725231FC856290099FCC7 /* CakeKillerScene.swift in Sources */,
+				52E725281FC856290099FCC7 /* DrinkingGame.swift in Sources */,
+				52E7251D1FC856290099FCC7 /* DeathStarScene.swift in Sources */,
 				5244243A1FC0951000FA03B3 /* GameViewController.swift in Sources */,
-				B399C7FE1FC71E2B00102E39 /* BubbleProtectScene.swift in Sources */,
-				A0020DA81FC739F700B2CDA7 /* CakeKillerGame.swift in Sources */,
 				524424341FC0939A00FA03B3 /* AppDelegate.swift in Sources */,
+				52E725221FC856290099FCC7 /* CakeKillerGame.swift in Sources */,
+				52E725201FC856290099FCC7 /* JumpHighGame.swift in Sources */,
+				52E725271FC856290099FCC7 /* DemoScene.swift in Sources */,
 				5244244E1FC0AB0A00FA03B3 /* Array+Random.swift in Sources */,
-				DC2B4B381FC7241300F3A1E2 /* CarGame.swift in Sources */,
-				525A7D041FC6F70B00FA8907 /* FireFighterGame.swift in Sources */,
-				FEC0DBCD1FC73A69001474A9 /* DeathStarGame.swift in Sources */,
-				525A7D051FC6F70B00FA8907 /* FireFighterScene.swift in Sources */,
-				63EEE3601FC71D47008B5B88 /* SmileyBilliardGame.swift in Sources */,
-				525A7D021FC6F70B00FA8907 /* SoccerGame.swift in Sources */,
+				52E7251C1FC856290099FCC7 /* DeathStarGame.swift in Sources */,
+				52E725251FC856290099FCC7 /* BubbleRocketScene.swift in Sources */,
+				52E725291FC856290099FCC7 /* DrinkingGameScene.swift in Sources */,
+				52E7251B1FC856290099FCC7 /* FireFighterScene.swift in Sources */,
+				52E725211FC856290099FCC7 /* JumpHighScene.swift in Sources */,
+				52E725101FC856290099FCC7 /* SoccerGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,14 +575,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 729WVZ5N33;
 				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.theswiftalps.game-jam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -591,14 +590,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 729WVZ5N33;
 				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.theswiftalps.game-jam";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
